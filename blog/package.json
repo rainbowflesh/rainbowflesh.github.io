@@ -1,6 +1,6 @@
 {
-  "name": "rainbowflesh_blog",
-  "version": "0.0.1",
+  "name": "blog",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -10,13 +10,16 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@sakun/system.css": "^0.1.6",
+    "pinia": "^2.0.21",
     "vue": "^3.2.38",
-    "@sakun/system.css": "^0.1.6"
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^16.11.56",
     "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/tsconfig": "^0.1.3",
