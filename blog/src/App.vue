@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
+function something() {
+  console.log("Wanna try something big?");
+}
+something;
 </script>
 
 <template>

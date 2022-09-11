@@ -61,9 +61,10 @@ bash .github/workflows/deploy.sh
 
 ## TODO
 
-TODO: console.log(logo)
 TODO: blog add kismet deploy
+
 TODO: blog add blog creation
-TODO: console.log("Wanna try something big?");
+
 TODO: import 7.css, xp.css, 98.css, ios7.css
+
 TODO: import suanming
