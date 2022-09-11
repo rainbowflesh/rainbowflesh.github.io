@@ -52,7 +52,7 @@ pnpm build
 ### Deploy
 
 ```shell
-bash .github/workflows/deploy.sh
+bash ../.github/workflows/deploy.sh
 ```
 
 > note: You need change username to yours.

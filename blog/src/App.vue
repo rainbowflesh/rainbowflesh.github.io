@@ -38,6 +38,11 @@ something;
                   <RouterLink to="/2022/0910">09102022</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2022/hadoop">hadoop</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>
