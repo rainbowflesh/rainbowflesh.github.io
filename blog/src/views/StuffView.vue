@@ -19,6 +19,10 @@ import "@/assets/blog.css";
           <a href="https://github.com/jdan/98.css">98.css</a>
         </li>
         I would use this to make some dialog.
+        <li>
+          <a href="https://github.com/khang-nd/7.css">7.css</a>
+        </li>
+        Windows 7 style css, why there still have people using 7?
       </ul>
     </div>
   </div>
