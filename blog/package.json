@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "98.css": "^0.1.18",
     "@sakun/system.css": "^0.1.6",
     "pinia": "^2.0.21",
     "vue": "^3.2.38",

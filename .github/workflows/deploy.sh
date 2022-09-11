@@ -1,26 +1,13 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-# abort on errors
-set -e
+pnpm run build
 
-# build
-npm run build
-
-# navigate into the build output directory
 cd dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
-
 git init
-git checkout -b main
+git checkout -b release
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<rainbowflesh>.github.io
-git push -f git@github.com: main <rainbowflesh >/ <rainbowflesh >.github.io.git
-
-# if you are deploying to https://<rainbowflesh>.github.io/<REPO>
-# git push -f git@github.com:<rainbowflesh>/<REPO>.git main:gh-pages
-
-cd -
+git push -f git@github.com:rainbowflesh/rainbowflesh.github.io.git
+# git push -f git@github.com:<username>/<username>.github.io.git
