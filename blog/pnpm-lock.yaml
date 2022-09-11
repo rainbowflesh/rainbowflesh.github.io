@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  98.css: ^0.1.18
   '@rushstack/eslint-patch': ^1.1.4
   '@sakun/system.css': ^0.1.6
   '@types/node': ^16.11.56
@@ -21,6 +22,7 @@ specifiers:
   vue-tsc: ^0.40.7
 
 dependencies:
+  98.css: 0.1.18
   '@sakun/system.css': 0.1.6
   pinia: 2.0.22_uxrvejtcwrakwzzo6hlouuo2vq
   vue: 3.2.39
@@ -43,6 +45,10 @@ devDependencies:
   vue-tsc: 0.40.13_typescript@4.7.4
 
 packages:
+
+  /98.css/0.1.18:
+    resolution: {integrity: sha512-I6l22DVVGAeets2KzpWhnbj3vCmP5HrkkZFnN8MhFF0z5yoXLkMM7p5vKCN9ap+Tnb4bFe4kukcMsinpDcnfhQ==}
+    dev: false
 
   /@ampproject/remapping/2.2.0:
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
