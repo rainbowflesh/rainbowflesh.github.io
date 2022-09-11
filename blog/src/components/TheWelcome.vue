@@ -3,11 +3,9 @@
 <template>
   <div class="container">
     <div class="header">
-      <p class="heading center" style="font-size: 3rem; text-align: center">
-        Rainbow's Blog
-      </p>
+      <p class="heading">Rainbow's Blog</p>
       <p
-        class="desc center"
+        class="desc"
         style="text-align: center; font-family: Geneva_9; font-size: 2em"
       >
         A blog designed with
@@ -17,16 +15,35 @@
       </p>
     </div>
     <div class="content">
-      <h1>Greeting!</h1>
-      <div style="padding-left: 20px">
-        <blockquote class="center">
+      <div class="text">
+        <h1>Greeting!</h1>
+        <blockquote style="text-align: center">
           Quidquid latine dictum sit, altum sonatur.
           <footer>
-            — I forgot where i find this quote but i use it,R. flesh
+            — I forgot where i find this quote but I use it, R. flesh
           </footer>
         </blockquote>
       </div>
-      <span>Welcome to my blog</span>
+      <div class="content" style="padding-left: 20px">
+        <span style="">Welcome to my blog</span>
+        <p>I create this blog for record my technic working life,</p>
+        <p>And sharding interesting stuff for ya.</p>
+      </div>
+      <p
+        style="
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-end;
+          align-items: flex-end;
+          align-content: flex-end;
+          margin-top: 5rem;
+        "
+      >
+        <a href="https://github.com/rainbowflesh/rainbowflesh.github.io">
+          Blog repo
+        </a>
+      </p>
     </div>
   </div>
 </template>
@@ -37,7 +54,8 @@ blockquote {
   width: 80%;
   font-size: 14px;
   border: 1px solid black;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 blockquote footer {
   margin: 12px 0 0 12px;

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-function something() {
-  console.log("Wanna try something big?");
-}
-something;
 </script>
-
+<script lang="ts">
+export default {
+  mounted() {
+    console.log("Wanna try something big? y/n");
+    console.log("%c >> n", "color:red");
+  },
+};
+</script>
 <template>
   <!-- <div class="container"> -->
   <div class="layout">
@@ -35,15 +38,22 @@ something;
 
               <li>
                 <nav>
-                  <RouterLink to="/2022/0910">09102022</RouterLink>
+                  <RouterLink to="/2022/kismet">Kismet usage record</RouterLink>
                 </nav>
               </li>
               <li>
                 <nav>
-                  <RouterLink to="/2022/hadoop">hadoop</RouterLink>
+                  <RouterLink to="/2022/hadoop"
+                    >Hadoop interview record</RouterLink
+                  >
                 </nav>
               </li>
             </ul>
+          </li>
+          <li>
+            <nav>
+              <RouterLink to="/stuff">面白いもの</RouterLink>
+            </nav>
           </li>
           <li>
             <nav>
@@ -71,7 +81,7 @@ something;
             id="text_find"
             type="text"
             style="width: 100%"
-            placeholder="something..."
+            placeholder="WIP..."
           />
         </section>
         <section class="field-row" style="justify-content: flex-end">
@@ -88,6 +98,7 @@ something;
 .layout {
   display: flex;
   justify-content: space-between;
+  min-height: 80vh;
 }
 .col-main {
   flex: 1;
