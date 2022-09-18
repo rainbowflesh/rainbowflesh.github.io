@@ -45,86 +45,16 @@ export default {
                     ></path></svg></a
                 >Hwllo there<g-emoji
                   fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
-                  ><img
-                    class="emoji"
-                    alt="wave"
-                    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
-                    width="20"
-                    height="20" /></g-emoji
+                  >👋</g-emoji
                 >, m'Nijikawa a data scientist desu
               </h1>
               <p dir="auto">I call myself a lofty tone geek.</p>
               <ul dir="auto">
-                <li>
-                  <g-emoji
-                    class="g-emoji"
-                    alias="sunglasses"
-                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png"
-                    ><img
-                      class="emoji"
-                      alt="sunglasses"
-                      src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png"
-                      width="20"
-                      height="20"
-                  /></g-emoji>
-                  Working on hardware full-stack development!
-                </li>
-                <li>
-                  <g-emoji
-                    class="g-emoji"
-                    alias="book"
-                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png"
-                    ><img
-                      class="emoji"
-                      alt="book"
-                      src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png"
-                      width="20"
-                      height="20"
-                  /></g-emoji>
-                  Read.
-                </li>
-                <li>
-                  <g-emoji
-                    class="g-emoji"
-                    alias="heart_eyes"
-                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60d.png"
-                    ><img
-                      class="emoji"
-                      alt="heart_eyes"
-                      src="https://github.githubassets.com/images/icons/emoji/unicode/1f60d.png"
-                      width="20"
-                      height="20"
-                  /></g-emoji>
-                  I know nothing but Bishōjo ;)
-                </li>
-                <li>
-                  <g-emoji
-                    class="g-emoji"
-                    alias="postbox"
-                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ee.png"
-                    ><img
-                      class="emoji"
-                      alt="postbox"
-                      src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ee.png"
-                      width="20"
-                      height="20"
-                  /></g-emoji>
-                  Reach me with email.
-                </li>
-                <li>
-                  <g-emoji
-                    class="g-emoji"
-                    alias="zap"
-                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a1.png"
-                    ><img
-                      class="emoji"
-                      alt="zap"
-                      src="https://github.githubassets.com/images/icons/emoji/unicode/26a1.png"
-                      width="20"
-                      height="20"
-                  /></g-emoji>
-                  Fun fact: Woa! Actually I am cyber-alchemy-ork.
-                </li>
+                <li>😎 Working on hardware full-stack development!</li>
+                <li>📖 Read.</li>
+                <li>😍 I know nothing but Bishōjo ;)</li>
+                <li>📮 Reach me with email.</li>
+                <li>⚡ Fun fact: Woa! Actually I am cyber-alchemy-ork.</li>
                 <li>
                   <a
                     href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/img/avatar/pixelavatar_opc_anmi.png"
@@ -151,18 +81,7 @@ export default {
                       fill-rule="evenodd"
                       d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
                     ></path></svg></a
-                >current statue
-                <g-emoji
-                  class="g-emoji"
-                  alias="point_down"
-                  fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png"
-                  ><img
-                    class="emoji"
-                    alt="point_down"
-                    src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png"
-                    width="20"
-                    height="20"
-                /></g-emoji>
+                >current statue 👇
               </h2>
               <p dir="auto">
                 <img

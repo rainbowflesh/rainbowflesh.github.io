@@ -29,6 +29,16 @@ const router = createRouter({
       name: "hadoop",
       component: () => import("../views/2022/blog_hadoop.vue"),
     },
+    {
+      path: "/2022/hive",
+      name: "hive",
+      component: () => import("../views/2022/blog_hive.vue"),
+    },
+    {
+      path: "/2022/spark",
+      name: "spark",
+      component: () => import("../views/2022/blog_spark.vue"),
+    },
   ],
 });
 

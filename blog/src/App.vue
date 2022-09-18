@@ -43,9 +43,17 @@ export default {
               </li>
               <li>
                 <nav>
-                  <RouterLink to="/2022/hadoop"
-                    >Hadoop interview record</RouterLink
-                  >
+                  <RouterLink to="/2022/hadoop">Hadoop</RouterLink>
+                </nav>
+              </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2022/hive">Hive</RouterLink>
+                </nav>
+              </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2022/spark">Spark</RouterLink>
                 </nav>
               </li>
             </ul>

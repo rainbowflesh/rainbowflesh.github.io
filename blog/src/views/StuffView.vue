@@ -23,6 +23,29 @@ import "@/assets/blog.css";
           <a href="https://github.com/khang-nd/7.css">7.css</a>
         </li>
         Windows 7 style css, why there still have people using 7?
+        <li>
+          <a href="https://www.mindprod.com/jgloss/unmain.html"
+            >Unmaintainable code</a
+          >
+        </li>
+        Feels like enterprise jvav guide.
+        <li>
+          <a
+            href="https://testing.googleblog.com/2008/07/how-to-write-3v1l-untestable-code.html"
+            >Untestable code</a
+          >
+        </li>
+        Who use unit test, aha?
+        <li>
+          <a href="https://alwaysjudgeabookbyitscover.com/"
+            >Always judge a book by it's cover</a
+          >
+        </li>
+        Example 👉
+        <img
+          src="https://d33wubrfki0l68.cloudfront.net/8976291c46c8d8d8f4e07c437ec614a6947b6a5f/e6679/assets/07-talk-to-your-cat.jpg"
+          height="200px"
+        />
       </ul>
     </div>
     <div class="rainbow-text">
