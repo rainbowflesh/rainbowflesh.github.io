@@ -12,7 +12,7 @@ export default {
 <template>
   <!-- <div class="container"> -->
   <div class="layout">
-    <div class="l-sidebar window">
+    <div class="l-sidebar window" style="max-height: 30rem">
       <div class="title-bar">
         <button aria-label="Close" class="close"></button>
         <h1 class="title">Index</h1>
@@ -79,10 +79,13 @@ export default {
     <div class="standard-dialog content">
       <RouterView />
     </div>
-    <div class="r-sidebar window scale-down" style="width: 30rem">
+    <div
+      class="r-sidebar window scale-down"
+      style="width: 30rem; max-height: 15rem"
+    >
       <div class="title-bar">
         <button aria-label="Close" class="close"></button>
-        <h1 class="title">Find blog</h1>
+        <h1 class="title">Find</h1>
         <button aria-label="Resize" disabled class="hidden"></button>
       </div>
       <div class="separator"></div>
@@ -101,6 +104,12 @@ export default {
           <button class="btn">Cancel</button>
           <button class="btn" style="width: 95px" onclick="test">Find</button>
         </section>
+        <div class="windows">
+          <div class="title-bar"></div>
+          <div>
+            <p>友链: naidesu</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

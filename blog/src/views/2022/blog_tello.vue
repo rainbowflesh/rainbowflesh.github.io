@@ -52,7 +52,7 @@ import "@/assets/blog.css";
       ><code><div>sudo airmon-ng start &lt;wlan_card&gt; # Enable monitor.
 <span class="hljs-meta">
 #</span><span class="bash"> Browser `localhost:2501` to use kismet web UI,</span>
-<span class="hljs-meta">#</span><span class="bash"> you can find drone<span class="hljs-string">'s MAC address easily.</span></span>
+<span class="hljs-meta">#</span><span class="bash"> you can find drone's MAC address easily.</span>
 kismet -c &lt;wlan_card_mon&gt;
 <span class="hljs-meta">
 #</span><span class="bash"><span class="hljs-string"> Connect to your drone from phone app, and de-authentication yourself</span></span>
@@ -293,7 +293,7 @@ switch = {
     pkt.fixup()
     drone.send_packet(pkt)
 </div></code></pre>
-      <p>Finally, we can connect to a drone and control ti with T1d:</p>
+      <p>Finally, we can connect to a drone and control it with T1d:</p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
 <span class="hljs-keyword">import</span> struct
 <span class="hljs-keyword">import</span> sys
@@ -401,7 +401,7 @@ global_data = <span class="hljs-literal">None</span>
 
 </div></code></pre>
       <p>
-        There are still some '&quot;TODO:&quot;' items to complete, such as the
+        There are still some &quot;TODO:&quot; items to complete, such as the
         rub connection and changing the SSID; I won't go into detail in this
         blog, but here are some points:
       </p>
@@ -416,8 +416,8 @@ global_data = <span class="hljs-literal">None</span>
         <li>
           <p>
             The Tello SDK includes a Python example that demonstrates how to
-            send a text command:'sock.sendto('wifi new ssid&gt; pwd&gt;', tello
-            address)'.
+            send a text command: `sock.sendto('wifi &lt;new_ssid&gt;
+            &lt;pwd&gt;', tello address)`.
           </p>
         </li>
       </ul>
