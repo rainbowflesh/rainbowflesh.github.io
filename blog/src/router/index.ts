@@ -39,6 +39,11 @@ const router = createRouter({
       name: "spark",
       component: () => import("../views/2022/blog_spark.vue"),
     },
+    {
+      path: "/2022/tello",
+      name: "tello",
+      component: () => import("../views/2022/blog_tello.vue"),
+    },
   ],
 });
 

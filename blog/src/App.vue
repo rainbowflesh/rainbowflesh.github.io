@@ -56,6 +56,11 @@ export default {
                   <RouterLink to="/2022/spark">Spark</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2022/tello">Tello Hack</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>
