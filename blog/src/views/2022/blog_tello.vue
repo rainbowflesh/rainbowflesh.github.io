@@ -270,7 +270,7 @@ switch = {
 </div></code></pre>
       <p>
         <strong>TelloPy</strong> gave a game controller stick mapper (function
-        <code>__send_stick_command</code>) to control drone, so I motif it to
+        <code>__send_stick_command</code>) to control drone, so I modified it to
         adapt T1d:
       </p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
