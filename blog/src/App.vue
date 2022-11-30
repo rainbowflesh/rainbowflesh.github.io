@@ -107,7 +107,8 @@ export default {
         <div class="windows">
           <div class="title-bar"></div>
           <div>
-            <p>友链: naidesu</p>
+            友链:
+            <p class="font-effect-anaglyph">naidesu</p>
           </div>
         </div>
       </div>
@@ -139,5 +140,9 @@ export default {
 .r-sidebar {
   min-width: 200px;
   margin-top: 18px;
+}
+
+.font-effect-anaglyph {
+  text-shadow: -0.1em 0 red, 0.1em 0 #0ff;
 }
 </style>
