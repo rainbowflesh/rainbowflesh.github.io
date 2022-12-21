@@ -44,6 +44,11 @@ const router = createRouter({
       name: "tello",
       component: () => import("../views/2022/blog_tello.vue"),
     },
+    {
+      path: "/2022/marp",
+      name: "tello",
+      component: () => import("../views/2022/blog_marpdown.vue"),
+    },
   ],
 });
 

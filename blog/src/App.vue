@@ -61,6 +61,11 @@ export default {
                   <RouterLink to="/2022/tello">Tello Hack</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2022/marp">Marp</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>
