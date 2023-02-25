@@ -63,7 +63,12 @@ export default {
               </li>
               <li>
                 <nav>
-                  <RouterLink to="/2022/marp">Marp</RouterLink>
+                  <RouterLink to="/2023/marp">Marp</RouterLink>
+                </nav>
+              </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2023/z13">Marp</RouterLink>
                 </nav>
               </li>
             </ul>

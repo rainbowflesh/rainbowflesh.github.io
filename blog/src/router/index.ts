@@ -45,9 +45,14 @@ const router = createRouter({
       component: () => import("../views/2022/blog_tello.vue"),
     },
     {
-      path: "/2022/marp",
+      path: "/2023/marp",
       name: "marp",
-      component: () => import("../views/2022/blog_marpdown.vue"),
+      component: () => import("../views/2023/blog_marpdown.vue"),
+    },
+    {
+      path: "/2023/z13",
+      name: "z13锐评",
+      component: () => import("../views/2023/blog_z13.vue"),
     },
   ],
 });
