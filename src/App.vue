@@ -76,6 +76,11 @@ export default {
                   <RouterLink to="/2023/z13">Rog Flow z13 2023</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2023/droneSim">无人机集群仿真</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>

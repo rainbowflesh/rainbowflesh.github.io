@@ -165,16 +165,17 @@ marp-pre {
 # Let's begin wit H1 title
 
 Start writing!
+
 <!-- 111 i am comment -->
 
-*I am italic*
-,,, ... """''';;;:::<><>??!~!#@$!^%&%*()"
+_I am italic_
+,,, ... """''';;;:::<><>??!~!#@$!^%&%\*()"
 
 1. ww
 2. 22
 
 - $\sqrt{1+x} = {(1+x)}^\frac{1}{2} = 1+\frac{1}{2x}+o{x}$
-**I am blob**
+  **I am blob**
 
 <https://www.aoligei.com>
 
@@ -184,28 +185,28 @@ Start writing!
 
 ```json
 {
-    // etc...
-    "markdown.marp.themes": [
-        "https://cunhapaulo.github.io/style/descartes.css",
-        "https://cunhapaulo.github.io/style/freud.css",
-        "https://cunhapaulo.github.io/style/hegel.css",
-        "https://cunhapaulo.github.io/style/heidegger.css",
-        "https://cunhapaulo.github.io/style/husserl.css",
-        "https://cunhapaulo.github.io/style/kant.css",
-        "https://cunhapaulo.github.io/style/leibniz.css",
-        "https://cunhapaulo.github.io/style/orwell.css",
-        "https://cunhapaulo.github.io/style/plato.css",
-        "https://cunhapaulo.github.io/style/schema.css",
-        "https://cunhapaulo.github.io/style/simple.css",
-        "https://cunhapaulo.github.io/style/socrates.css",
-        "https://cunhapaulo.github.io/style/structure.css",
-        "https://raw.githubusercontent.com/hnsol/marp-custom-theme/main/gaia_custom.css",
-        "https://raw.githubusercontent.com/hnsol/marp-custom-theme/main/gaia_gd.css",
-        "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/a4-dark.css",
-        "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/a4-light.css",
-        "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/atom-one-dark.css"
-    ]
-    // etc...
+  // etc...
+  "markdown.marp.themes": [
+    "https://cunhapaulo.github.io/style/descartes.css",
+    "https://cunhapaulo.github.io/style/freud.css",
+    "https://cunhapaulo.github.io/style/hegel.css",
+    "https://cunhapaulo.github.io/style/heidegger.css",
+    "https://cunhapaulo.github.io/style/husserl.css",
+    "https://cunhapaulo.github.io/style/kant.css",
+    "https://cunhapaulo.github.io/style/leibniz.css",
+    "https://cunhapaulo.github.io/style/orwell.css",
+    "https://cunhapaulo.github.io/style/plato.css",
+    "https://cunhapaulo.github.io/style/schema.css",
+    "https://cunhapaulo.github.io/style/simple.css",
+    "https://cunhapaulo.github.io/style/socrates.css",
+    "https://cunhapaulo.github.io/style/structure.css",
+    "https://raw.githubusercontent.com/hnsol/marp-custom-theme/main/gaia_custom.css",
+    "https://raw.githubusercontent.com/hnsol/marp-custom-theme/main/gaia_gd.css",
+    "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/a4-dark.css",
+    "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/a4-light.css",
+    "https://raw.githubusercontent.com/stanfrbd/A4-marp/main/atom-one-dark.css"
+  ]
+  // etc...
 }
 ```
 
@@ -240,6 +241,7 @@ def __superIdol
 ```
 
 ---
+
 Jvav
 
 ```java
@@ -254,6 +256,7 @@ public class Hello {
 ```
 
 ---
+
 TypeScript
 
 ```typescript
@@ -264,20 +267,22 @@ mounted() {
 ```
 
 ---
+
 JavaScript
 
 ```javascript
 // Named function
 function rocketToMars() {
-  return 'BOOM!';
+  return "BOOM!";
 }
 const sum = (param1, param2) => {
   return param1 + param2;
 };
-console.log(sum(2,5)); // => 7
+console.log(sum(2, 5)); // => 7
 ```
 
 ---
+
 Bash
 
 ```bash
@@ -285,6 +290,7 @@ echo "wtf"
 ```
 
 ---
+
 Rust
 
 ```rust
@@ -317,6 +323,7 @@ end
 ```
 
 ---
+
 C++++
 
 ```csharp
@@ -331,6 +338,7 @@ class Hello {
 ```
 
 ---
+
 PowerShell
 
 ```powershell
@@ -363,6 +371,7 @@ exit
 ```
 
 ---
+
 Cpp
 
 ```cpp
@@ -376,6 +385,7 @@ int main()
 ```
 
 ---
+
 Golang
 
 ```go
@@ -389,6 +399,7 @@ func main() {
 ```
 
 ---
+
 Haskell
 
 ```hs
@@ -396,6 +407,7 @@ Haskell
 ```
 
 ---
+
 SQL
 
 ```sql
@@ -414,6 +426,7 @@ create table hello (
 
 [![npm](https://98badges.now.sh/api/version)](1)
 [![gzip size](https://98badges.now.sh/api/size)](https://unpkg.com/98.css)
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -472,6 +485,7 @@ bash ../.github/workflows/deploy.sh
 ```
 
 > note: You need change username to yours.
+
 ---
 
 ## WIP

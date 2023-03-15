@@ -1,17 +1,17 @@
 # A way to hack Dji Tello
 
-I got an R&D job few weeks ago that required me to hack multiple drones, also known as *Counter-Unmanned Aircraft Swarm System*.
+I got an R&D job few weeks ago that required me to hack multiple drones, also known as _Counter-Unmanned Aircraft Swarm System_.
 I'm in charge of confrontation and simulation work, but this is my first foray into the field, so first and foremost, I need to understand how to hack a single simple drone.
 
 ## System design
 
 Using a **DJI Tello** drone play victim role, a **Rock Pi** as attacker program carrier, and a **GameSir T1d** as attacker controller.
 
-![image](../blog/src/assets/img/IMG20220929185104.jpg)
+![image](/public/img/IMG20220929185104.jpg)
 
 Two Wi-Fi cards are also required, one of which must be in monitor mode.
 
-> I  chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal **didn't enable** this driver by default; choose a right device make your life easier.
+> I chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal **didn't enable** this driver by default; choose a right device make your life easier.
 
 This system use front-end and back-end separated web service architecture, based on Ubuntu Server OS.
 
@@ -55,30 +55,30 @@ Locate to **kismet** web ui > setting > api > api token, create a token that you
 ```typescript
 // TypeScript
 declare namespace API {
-    interface Drone_Data {
-        [x: string]: any;
-        data?: [];
-    }
+  interface Drone_Data {
+    [x: string]: any;
+    data?: [];
+  }
 }
 
 export async function getDroneInfo() {
-    return request<API.Drone_Data>(
-        "/devices/views/phydot11_accesspoints/devices.json",
-        {
-            method: "POST",
-            params: { KISMET: "a_kismet_api_token" },
-            data: {
-                fields: [
-                    "kismet.device.base.macaddr",
-                    "uav.device",
-                    "kismet.device.base.commonname",
-                    "kismet.device.base.channel",
-                    "dot11.device/dot11.device.associate_ssid_map"
-                ],
-            },
-            ...(Option || []),
-        },
-    );
+  return request<API.Drone_Data>(
+    "/devices/views/phydot11_accesspoints/devices.json",
+    {
+      method: "POST",
+      params: { KISMET: "a_kismet_api_token" },
+      data: {
+        fields: [
+          "kismet.device.base.macaddr",
+          "uav.device",
+          "kismet.device.base.commonname",
+          "kismet.device.base.channel",
+          "dot11.device/dot11.device.associate_ssid_map",
+        ],
+      },
+      ...(Option || []),
+    }
+  );
 }
 ```
 

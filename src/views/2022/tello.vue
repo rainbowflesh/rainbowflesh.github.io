@@ -20,7 +20,7 @@ import "@/assets/blog.css";
         <strong>GameSir T1d</strong> as attacker controller.
       </p>
       <p>
-        <img src="/src/assets/img/IMG20220929185104.jpg" />
+        <img src="/img/IMG20220929185104.jpg" />
       </p>
       <p>
         Two Wi-Fi cards are also required, one of which must be in monitor mode.

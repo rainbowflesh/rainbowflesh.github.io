@@ -85,20 +85,16 @@ export default {
               </h2>
               <p dir="auto">
                 <img
-                  src="/src/assets/img/stat0.jpg"
+                  src="/img/stat0.jpg"
                   alt="Hunting-to-love"
                   style="max-width: 100%"
                 />
                 ><img
-                  src="/src/assets/img/stat1.jpg"
+                  src="/img/stat1.jpg"
                   alt="tired"
                   style="max-width: 100%; width: 200px"
                 />
-                ><img
-                  src="/src/assets/img/🤑.jpg"
-                  alt="🤑"
-                  style="max-width: 100%"
-                />
+                ><img src="/img/🤑.jpg" alt="🤑" style="max-width: 100%" />
               </p>
             </article>
           </div>
