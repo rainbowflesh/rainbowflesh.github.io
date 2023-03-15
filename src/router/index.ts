@@ -22,37 +22,42 @@ const router = createRouter({
     {
       path: "/2022/kismet",
       name: "kismet",
-      component: () => import("../views/2022/blog_kismet.vue"),
+      component: () => import("../views/2022/kismet.vue"),
     },
     {
       path: "/2022/hadoop",
       name: "hadoop",
-      component: () => import("../views/2022/blog_hadoop.vue"),
+      component: () => import("../views/2022/hadoop.vue"),
     },
     {
       path: "/2022/hive",
       name: "hive",
-      component: () => import("../views/2022/blog_hive.vue"),
+      component: () => import("../views/2022/hive.vue"),
     },
     {
       path: "/2022/spark",
       name: "spark",
-      component: () => import("../views/2022/blog_spark.vue"),
+      component: () => import("../views/2022/spark.vue"),
     },
     {
       path: "/2022/tello",
       name: "tello",
-      component: () => import("../views/2022/blog_tello.vue"),
+      component: () => import("../views/2022/tello.vue"),
     },
     {
       path: "/2023/marp",
       name: "marp",
-      component: () => import("../views/2023/blog_marpdown.vue"),
+      component: () => import("../views/2023/marpdown.vue"),
     },
     {
       path: "/2023/z13",
       name: "z13锐评",
-      component: () => import("../views/2023/blog_z13.vue"),
+      component: () => import("../views/2023/z13.vue"),
+    },
+    {
+      path: "/2023/droneSim",
+      name: "无人机仿真",
+      component: () => import("../views/2023/droneSim.vue"),
     },
   ],
 });

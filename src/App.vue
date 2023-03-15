@@ -12,7 +12,7 @@ export default {
 <template>
   <!-- <div class="container"> -->
   <div class="layout">
-    <div class="l-sidebar window" style="max-height: 30rem">
+    <div class="l-sidebar window">
       <div class="title-bar">
         <button aria-label="Close" class="close"></button>
         <h1 class="title">Index</h1>
@@ -34,33 +34,38 @@ export default {
           <li>
             Blogs
             <ul>
-              2022
-
-              <li>
-                <nav>
-                  <RouterLink to="/2022/kismet">Kismet usage record</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/hadoop">Hadoop</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/hive">Hive</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/spark">Spark</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/tello">Tello Hack</RouterLink>
-                </nav>
-              </li>
+              <details>
+                <summary>2022</summary>
+                <li>
+                  <nav>
+                    <RouterLink to="/2022/kismet"
+                      >Kismet usage record</RouterLink
+                    >
+                  </nav>
+                </li>
+                <li>
+                  <nav>
+                    <RouterLink to="/2022/hadoop">Hadoop</RouterLink>
+                  </nav>
+                </li>
+                <li>
+                  <nav>
+                    <RouterLink to="/2022/hive">Hive</RouterLink>
+                  </nav>
+                </li>
+                <li>
+                  <nav>
+                    <RouterLink to="/2022/spark">Spark</RouterLink>
+                  </nav>
+                </li>
+                <li>
+                  <nav>
+                    <RouterLink to="/2022/tello">Tello Hack</RouterLink>
+                  </nav>
+                </li>
+              </details>
+              <br />
+              2023
               <li>
                 <nav>
                   <RouterLink to="/2023/marp">Marp</RouterLink>
@@ -68,7 +73,7 @@ export default {
               </li>
               <li>
                 <nav>
-                  <RouterLink to="/2023/z13">Marp</RouterLink>
+                  <RouterLink to="/2023/z13">Rog Flow z13 2023</RouterLink>
                 </nav>
               </li>
             </ul>
@@ -140,6 +145,7 @@ export default {
 }
 .l-sidebar {
   min-width: 210px;
+  min-height: 40rem;
   margin-top: 18px;
 }
 .standard-dialog {

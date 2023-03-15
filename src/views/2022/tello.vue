@@ -20,11 +20,7 @@ import "@/assets/blog.css";
         <strong>GameSir T1d</strong> as attacker controller.
       </p>
       <p>
-        <img
-          src="/src/assets/img/IMG20220929185104.jpg"
-          alt="image"
-          height="400px"
-        />
+        <img src="/src/assets/img/IMG20220929185104.jpg" />
       </p>
       <p>
         Two Wi-Fi cards are also required, one of which must be in monitor mode.
@@ -460,4 +456,8 @@ global_data = <span class="hljs-literal">None</span>
   </div>
 </template>
 
-<style></style>
+<style>
+img {
+  max-width: 200px;
+}
+</style>

@@ -103,9 +103,25 @@ export default {
             </article>
           </div>
         </div>
+        <div
+          class="standard-dialog center scale-down copy-right"
+          style="width: 30rem"
+        >
+          <h1 class="dialog-text">
+            The RainbowFlesh's Blog, Version .42 (0315223)
+          </h1>
+          <p class="dialog-text">&copy; 1996 Flesh Computer</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+.center {
+  text-align: center;
+}
+.copy-right {
+  margin: auto;
+}
+</style>

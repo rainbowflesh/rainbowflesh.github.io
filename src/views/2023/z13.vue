@@ -123,4 +123,8 @@ import "@/assets/blog.css";
   </div>
 </template>
 
-<style></style>
+<style>
+img {
+  max-width: 200px;
+}
+</style>
