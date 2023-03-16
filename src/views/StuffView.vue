@@ -8,7 +8,7 @@ import "@/assets/blog.css";
     <h1 style="text-align: center">Try find something you like ;)</h1>
   </div>
   <div class="content">
-    <div>
+    <div class="content-item css">
       <h3>Cool Style Sheets</h3>
       <ul>
         <li>
@@ -25,6 +25,11 @@ import "@/assets/blog.css";
           <a href="https://github.com/khang-nd/7.css">7.css</a>
           <p>Windows 7 style css, why there still have people using 7?</p>
         </li>
+      </ul>
+    </div>
+    <div class="content-item etc">
+      <h3>Something else</h3>
+      <ul>
         <li>
           <a href="https://www.mindprod.com/jgloss/unmain.html"
             >Unmaintainable code</a
@@ -44,10 +49,48 @@ import "@/assets/blog.css";
           >
           <p></p>
         </li>
-        <img src="/img/bookcover.jpg" height="200px" />👈 Example
+        <img src="/img/bookcover.jpg" style="max-width: 200px" />👈 Example
+      </ul>
+    </div>
+    <div class="content-item rice">
+      <h3>Rice</h3>
+      <ul>
+        <li>
+          <details class="gnome">
+            <summary>gnome</summary>
+            <img src="/img/rice/gnome/rice.jpg" style="max-width: 90%" />
+
+            <br />
+            <img src="/img/rice/gnome/rice1.png" style="max-width: 90%" />
+            <img src="/img/rice/gnome/rice2.png" style="max-width: 90%" />
+            <img src="/img/rice/gnome/rice3.png" style="max-width: 90%" />
+            <br />
+            <button
+              class="btn"
+              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
+            >
+              Back to top
+            </button>
+          </details>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <details class="win">
+            <summary>windows 11</summary>
+            <img src="/img/rice/win/rice.jpg" style="max-width: 90%" />
+            <br />
+            <img src="/img/rice/win/rice1.png" style="max-width: 90%" />
+            <br />
+            <button
+              class="btn"
+              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
+            >
+              Back to top
+            </button>
+          </details>
+        </li>
       </ul>
     </div>
   </div>
 </template>
-
-<style></style>
