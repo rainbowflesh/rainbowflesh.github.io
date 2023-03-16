@@ -78,9 +78,9 @@ import "@/assets/blog.css";
         <li>
           <details class="win">
             <summary>windows 11</summary>
-            <img src="/img/rice/win/rice.jpg" style="max-width: 90%" />
+            <!-- <img src="/img/rice/win/rice.jpg" style="max-width: 90%" /> -->
             <br />
-            <img src="/img/rice/win/rice1.png" style="max-width: 90%" />
+            <!-- <img src="/img/rice/win/rice1.png" style="max-width: 90%" /> -->
             <br />
             <button
               class="btn"
