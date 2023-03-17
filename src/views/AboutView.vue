@@ -46,11 +46,11 @@ export default {
                 >Hwllo there<g-emoji
                   fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
                   >👋</g-emoji
-                >, m'Nijikawa a data scientist desu
+                >, m'Rainbow`Flesh a Cybersecurity & UAV engineer desu
               </h1>
               <p dir="auto">I call myself a lofty tone geek.</p>
               <ul dir="auto">
-                <li>😎 Working on hardware full-stack development!</li>
+                <li>😎 Working in bit.edu.cn, R&D of CUAS!</li>
                 <li>📖 Read.</li>
                 <li>😍 I know nothing but Bishōjo ;)</li>
                 <li>📮 Reach me with email.</li>
