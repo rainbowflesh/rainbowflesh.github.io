@@ -89,6 +89,23 @@ import "@/assets/blog.css";
           </details>
         </li>
       </ul>
+      <ul>
+        <li>
+          <details class="kde">
+            <summary>KDE Plasma</summary>
+            <img src="/img/rice/kde/rice.png" style="max-width: 90%" />
+            <br /><img src="/img/rice/kde/rice1.png" style="max-width: 90%" />
+            <br /><img src="/img/rice/kde/rice2.png" style="max-width: 90%" />
+            <br />
+            <button
+              class="btn"
+              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
+            >
+              Back to top
+            </button>
+          </details>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
