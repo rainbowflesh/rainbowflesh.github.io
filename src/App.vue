@@ -81,6 +81,11 @@ export default {
                   <RouterLink to="/2023/droneSim">无人机集群仿真</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2023/pyDbus">Python & Dbus</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>

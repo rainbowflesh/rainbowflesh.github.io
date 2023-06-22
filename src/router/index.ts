@@ -59,6 +59,12 @@ const router = createRouter({
       name: "无人机仿真",
       component: () => import("../views/2023/droneSim.vue"),
     },
+
+    {
+      path: "/2023/pyDbus",
+      name: "pythonDbus",
+      component: () => import("../views/2023/pyDbus.vue"),
+    },
   ],
 });
 
