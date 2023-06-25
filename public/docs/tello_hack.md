@@ -7,7 +7,7 @@ I'm in charge of confrontation and simulation work, but this is my first foray i
 
 Using a **DJI Tello** drone play victim role, a **Rock Pi** as attacker program carrier, and a **GameSir T1d** as attacker controller.
 
-![image](/public/img/IMG20220929185104.jpg)
+![image](/public/images/blogs/IMG20220929185104.jpg)
 
 Two Wi-Fi cards are also required, one of which must be in monitor mode.
 

@@ -78,7 +78,7 @@ import "@/assets/blog.css";
       <h2 id="%E8%B5%B7%E9%A3%9E">起飞</h2>
       <p>
         飞控炸了, qgc 里没办法校准传感器, airsim 里没法和 qgc 通讯.
-        <img src="/img/feibuqilai.jpeg" alt="飞不起来" />
+        <img src="/images/blogs/feibuqilai.jpg" alt="飞不起来" />
       </p>
       <h2 id="todo">TODO</h2>
       <p>下周继续搞这个</p>

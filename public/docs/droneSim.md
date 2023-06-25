@@ -35,7 +35,7 @@ Follow the [introduce](https://microsoft.github.io/AirSim/px4_setup/).
 ## 起飞
 
 飞控炸了, qgc 里没办法校准传感器, airsim 里没法和 qgc 通讯.
-![飞不起来](/public/img/feibuqilai.jpeg)
+![飞不起来](/public/images/blogsfeibuqilai.jpeg)
 
 ## TODO
 

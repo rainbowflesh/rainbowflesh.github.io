@@ -4,8 +4,8 @@ import "@/assets/blog.css";
 <template>
   <div class="header">
     <p class="heading">Interesting Stuffs</p>
-
     <h1 style="text-align: center">Try find something you like ;)</h1>
+    <p style="text-align: right">Btw I � Unicode</p>
   </div>
   <div class="content">
     <div class="content-item css">
@@ -31,25 +31,18 @@ import "@/assets/blog.css";
       <h3>Something else</h3>
       <ul>
         <li>
-          <a href="https://www.mindprod.com/jgloss/unmain.html"
-            >Unmaintainable code</a
-          >
+          <a href="https://www.mindprod.com/jgloss/unmain.html">Unmaintainable code</a>
           <p>Feels like enterprise jvav guide.</p>
         </li>
         <li>
-          <a
-            href="https://testing.googleblog.com/2008/07/how-to-write-3v1l-untestable-code.html"
-            >Untestable code</a
-          >
+          <a href="https://testing.googleblog.com/2008/07/how-to-write-3v1l-untestable-code.html">Untestable code</a>
           <p>Who use unit test, aha?</p>
         </li>
         <li>
-          <a href="https://alwaysjudgeabookbyitscover.com/"
-            >Always judge a book by it's cover</a
-          >
+          <a href="https://alwaysjudgeabookbyitscover.com/">Always judge a book by it's cover</a>
           <p></p>
         </li>
-        <img src="/img/bookcover.jpg" style="max-width: 200px" />👈 Example
+        <img src="/images/stuffs/bookcover.jpg" style="max-width: 200px" />👈 Example
       </ul>
     </div>
     <div class="content-item rice">
@@ -58,17 +51,14 @@ import "@/assets/blog.css";
         <li>
           <details class="gnome">
             <summary>gnome</summary>
-            <img src="/img/rice/gnome/rice.jpg" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice.jpg" style="max-width: 90%" />
 
             <br />
-            <img src="/img/rice/gnome/rice1.png" style="max-width: 90%" />
-            <img src="/img/rice/gnome/rice2.png" style="max-width: 90%" />
-            <img src="/img/rice/gnome/rice3.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice1.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice2.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice3.png" style="max-width: 90%" />
             <br />
-            <button
-              class="btn"
-              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
-            >
+            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
               Back to top
             </button>
           </details>
@@ -78,12 +68,9 @@ import "@/assets/blog.css";
         <li>
           <details class="win">
             <summary>windows 11</summary>
-            <img src="/img/rice/windows/rice.png" style="max-width: 90%" />
+            <img src="/images/rices/windows/rice.png" style="max-width: 90%" />
             <br />
-            <button
-              class="btn"
-              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
-            >
+            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
               Back to top
             </button>
           </details>
@@ -93,14 +80,11 @@ import "@/assets/blog.css";
         <li>
           <details class="kde">
             <summary>KDE Plasma</summary>
-            <img src="/img/rice/kde/rice.png" style="max-width: 90%" />
-            <br /><img src="/img/rice/kde/rice1.png" style="max-width: 90%" />
-            <br /><img src="/img/rice/kde/rice2.png" style="max-width: 90%" />
+            <img src="/images/rices/kde/rice.png" style="max-width: 90%" />
+            <br /><img src="/images/rices/kde/rice1.png" style="max-width: 90%" />
+            <br /><img src="/images/rices/kde/rice2.png" style="max-width: 90%" />
             <br />
-            <button
-              class="btn"
-              onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"
-            >
+            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
               Back to top
             </button>
           </details>

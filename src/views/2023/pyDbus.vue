@@ -7,7 +7,7 @@ import "@/assets/blog.css";
     <div class="content">
       <h1 id="let-python-use-dbus">Let python use Dbus</h1>
       <blockquote>
-        <p>上接 tello_hack.md.</p>
+        <p>上接 tello_hack.md</p>
       </blockquote>
       <p>
         无人机破解完成后, 需要让地面站连接上无人机, 考虑到地面站运行的 ubuntu 系统自带 network-manager 这么一个软件,

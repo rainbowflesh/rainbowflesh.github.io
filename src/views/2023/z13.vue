@@ -32,7 +32,7 @@ import "@/assets/blog.css";
       <h2 id="%E5%BC%80%E7%AE%B1">开箱</h2>
       <p>做饭看锅呢, 随便拆了拆没什么好瞧的.</p>
       <p>
-        <img src="/img/z13/z131.jpg" alt="看看我的粉色围裙" />
+        <img src="/images/blogs/flow_z13/1.jpg" alt="看看我的粉色围裙" />
       </p>
       <h2 id="%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95">性能测试</h2>
       <p>分别测试了游戏性能和软件编译性能, 以及常规的硬件设备检查.</p>
@@ -43,27 +43,27 @@ import "@/assets/blog.css";
       </h3>
       <p>画质拉满, 1080p 分辨率; 60 帧畅玩</p>
       <p>
-        <img src="/img/z13/z132.jpg" alt="ksp2" />
-        <img src="/img/z13/z133.jpg" alt="60 帧畅玩" />
-        <img src="/img/z13/z134.jpg" alt="载人航天圆满成功" />
+        <img src="/images/blogs/flow_z13/2.jpg" alt="ksp2" />
+        <img src="/images/blogs/flow_z13/3.jpg" alt="60 帧畅玩" />
+        <img src="/images/blogs/flow_z13/4.jpg" alt="载人航天圆满成功" />
       </p>
       <h3 id="%E5%8E%9F%E5%AD%90%E4%B9%8B%E5%BF%83%E7%9A%84%E6%B5%8B%E8%AF%95">
         原子之心的测试
       </h3>
       <p>
         画质拉满, 不开 dlss, 2k 分辨率
-        <img src="/img/z13/z135.jpg" alt="原子之心" />
-        <img src="/img/z13/z136.jpg" alt="甚至有 40fps" />
+        <img src="/images/blogs/flow_z13/5.jpg" alt="原子之心" />
+        <img src="/images/blogs/flow_z13/6.jpg" alt="甚至有 40fps" />
       </p>
       <p>这个小平板属实手提核弹, 能跑到 40~50 帧, 完全超出了我的预期.</p>
       <h2 id="%E5%85%B6%E4%BB%96%E7%A1%AC%E4%BB%B6">其他硬件</h2>
       <p>
         非全贴合屏幕, 离近了斜着能看到背光板:
-        <img src="/img/z13/z137.jpg" alt="屏幕" />
+        <img src="/images/blogs/flow_z13/7.jpg" alt="屏幕" />
       </p>
       <p>
         自带的音响, 音质听起来非常不错:
-        <img src="/img/z13/z138.jpg" alt="speaker" />
+        <img src="/images/blogs/flow_z13/8.jpg" alt="speaker" />
       </p>
       <p>内存:</p>
       <p>
