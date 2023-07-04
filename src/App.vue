@@ -38,9 +38,7 @@ export default {
                 <summary>2022</summary>
                 <li>
                   <nav>
-                    <RouterLink to="/2022/kismet"
-                      >Kismet usage record</RouterLink
-                    >
+                    <RouterLink to="/2022/kismet">Kismet usage record</RouterLink>
                   </nav>
                 </li>
                 <li>
@@ -86,6 +84,11 @@ export default {
                   <RouterLink to="/2023/pyDbus">Python & Dbus</RouterLink>
                 </nav>
               </li>
+              <li>
+                <nav>
+                  <RouterLink to="/2023/starfieldVisual">Starfield Visual</RouterLink>
+                </nav>
+              </li>
             </ul>
           </li>
           <li>
@@ -104,10 +107,7 @@ export default {
     <div class="standard-dialog content">
       <RouterView />
     </div>
-    <div
-      class="r-sidebar window scale-down"
-      style="width: 30rem; max-height: 15rem"
-    >
+    <div class="r-sidebar window scale-down" style="width: 30rem; max-height: 15rem">
       <div class="title-bar">
         <button aria-label="Close" class="close"></button>
         <h1 class="title">Find</h1>
@@ -118,12 +118,7 @@ export default {
       <div class="modeless-dialog">
         <section class="field-row" style="justify-content: flex-start">
           <label for="text_find" class="modeless-text">Find:</label>
-          <input
-            id="text_find"
-            type="text"
-            style="width: 100%"
-            placeholder="WIP..."
-          />
+          <input id="text_find" type="text" style="width: 100%" placeholder="WIP..." />
         </section>
         <section class="field-row" style="justify-content: flex-end">
           <button class="btn">Cancel</button>
