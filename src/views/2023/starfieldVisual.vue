@@ -5,7 +5,8 @@ import "@/assets/blog.css";
   <title>Starfield Visual</title>
   <div class="container">
     <div class="content">
-      <h1>没看过原作的 Starfield Visual 同人 OOC</h1>
+      <h1>没看过原作的 Starfield 同人 OOC 视觉图</h1>
+      <h4>标签: 同人 OOC, 屎掘图, 抽象, 抽象艺术, 抽象, (CC 4.0)©</h4>
       <div class="dark">
         <div class="banner color-palette"></div>
         <div class="wallpaper-dark">
@@ -23,11 +24,55 @@ import "@/assets/blog.css";
         </div>
         <div class="banner color-palette"></div>
       </div>
+      <p>上面👆那两个其实是 CSS 渲染的.</p>
+      <p>下面👇是正经图片.</p>
+      <div class="preview">
+        <img class="preview" src="/images/blogs/starfield/4k-web.png" />
+        <br />
+        <br />
+        <img class="preview" src="/images/blogs/starfield/4k-web-logo.png" />
+        <br />
+        <br />
+        <img class="preview right" src="/images/blogs/starfield/4k-web-logo-dark.png" />
+        <br />
+        <br />
+        <img class="preview" src="/images/blogs/starfield/4k-web-icon.png" />
+        <br />
+        <br />
+        <img class="preview" src="/images/blogs/starfield/4k-web-icon-dark.png" />
+        <br />
+        <br />
+        <img class="preview" src="/images/blogs/starfield/2k-web.png" />
+        <br />
+        <br />
+        <img class="preview" src="/images/blogs/starfield/2k-web-light.png" />
+        <br />
+        <br />
+      </div>
+      <div class="work">
+        <ul role="menu-bar">
+          <li role="menu-item" tabindex="0" aria-haspopup="false">
+            <a
+              target="_blank"
+              href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh.github.io/main/public/images/blogs/starfield/work.psd"
+              download="work.psd"
+              >Download 原始檔案</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+.right {
+  margin-right: 0;
+  margin-left: auto;
+}
+.preview {
+  width: 480px;
+}
 .color-palette {
   --number-of-stripes: 4;
   --stripe-height: 12px;
