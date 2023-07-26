@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import "@/assets/blog.css";
-</script>
+<script setup lang="ts"></script>
 <template>
   <title>Python Dbus usage</title>
   <div class="container">
@@ -28,14 +26,19 @@ dbus.SystemBus().get_object(
         这个玩意儿理解起来就是, 从 <code>dbus</code> 路径 <code>org.freedesktop.NetworkManager</code> 下获得
         <code>/org/freedesktop/NetworkManager/Settings</code> 对象, 😑没错这是个对象, 包含了各种接下来所需的方法的对象;
         至于这个对象的定义, 还要从<a
-          href="https://people.freedesktop.org/~lkundrak/nm-docs/gdbus-org.freedesktop.NetworkManager.Settings.html">文档</a>里看起;
+          href="https://people.freedesktop.org/~lkundrak/nm-docs/gdbus-org.freedesktop.NetworkManager.Settings.html"
+          >文档</a
+        >里看起;
       </p>
       <p>😂 作为一个掉包侠, 习惯直接看源码猜用法, 但这次老老实实上网找文档才看明白怎么用.</p>
       <p>ps: 用 <code>D-Feet</code> 这个软件可以直接调试 dbus, 好用的很, 用起来跟上面一样照着文档写参数 🥲.</p>
       <h2 id="example">Example</h2>
       <p>
-        基本上是从<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/vpn.py">这里</a>和<a
-          href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/add-connection.py">这里</a>抄过来改吧改吧做出来的东西.
+        基本上是从<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/vpn.py"
+          >这里</a
+        >和<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/add-connection.py"
+          >这里</a
+        >抄过来改吧改吧做出来的东西.
       </p>
       <pre class="hljs"><code><div><span class="hljs-keyword">import</span> logging
 <span class="hljs-keyword">import</span> uuid
@@ -192,8 +195,9 @@ dbus.SystemBus().get_object(
       <h2 id="%E5%8F%82%E8%80%83">参考</h2>
       <p><a href="https://people.freedesktop.org/~lkundrak/nm-docs/spec.html">NetworkManager D-Bus API Reference</a></p>
       <p>
-        <a href="https://github.com/NetworkManager/NetworkManager/tree/main/examples/python/dbus">NetworkManager Python
-          Dbus Example</a>
+        <a href="https://github.com/NetworkManager/NetworkManager/tree/main/examples/python/dbus"
+          >NetworkManager Python Dbus Example</a
+        >
       </p>
       <h2 id="%E5%90%8E%E8%AE%B0">后记</h2>
       <p>剧终.</p>

@@ -1,16 +1,13 @@
-<script setup lang="ts">
-import "@/assets/blog.css";
-</script>
+<script setup lang="ts"></script>
 <template>
   <title>Marp Markdown Engineer Beginner</title>
   <div class="container">
     <div class="content">
       <h1>Rosé Pine for Marp</h1>
       <p>
-        最近发现的一个 Markdown 拓展软件 <a href="https://marp.app">Marp</a>,
-        试了一下还挺有意思的, 拿 Markdown 做 PPT, 符合我对 markdown
-        写一切文本内容的认知; 随即发现这个东西还能自定义主题, 这我就按耐不住了,
-        光速制作了 Rosé Pine 系列配色主题三套.
+        最近发现的一个 Markdown 拓展软件 <a href="https://marp.app">Marp</a>, 试了一下还挺有意思的, 拿 Markdown 做 PPT,
+        符合我对 markdown 写一切文本内容的认知; 随即发现这个东西还能自定义主题, 这我就按耐不住了, 光速制作了 Rosé Pine
+        系列配色主题三套.
       </p>
       <p>
         顺带给 Rose Pine 组织

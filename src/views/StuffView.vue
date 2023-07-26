@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import "@/assets/blog.css";
-</script>
+<script setup lang="ts"></script>
 <template>
   <div class="header">
     <p class="heading">Interesting Stuffs</p>
@@ -13,9 +11,7 @@ import "@/assets/blog.css";
       <ul>
         <li>
           <a href="https://sakofchit.github.io/system.css">system.css</a>
-          <p>
-            I love this soooo much, that I decide use this decorate my blog.
-          </p>
+          <p>I love this soooo much, that I decide use this decorate my blog.</p>
         </li>
         <li>
           <a href="https://github.com/jdan/98.css">98.css</a>
@@ -51,12 +47,9 @@ import "@/assets/blog.css";
         <li>
           <details class="gnome">
             <summary>gnome</summary>
-            <img src="/images/rices/gnome/rice.jpg" style="max-width: 90%" />
-
-            <br />
-            <img src="/images/rices/gnome/rice1.png" style="max-width: 90%" />
-            <img src="/images/rices/gnome/rice2.png" style="max-width: 90%" />
-            <img src="/images/rices/gnome/rice3.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice4.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice5.png" style="max-width: 90%" />
+            <img src="/images/rices/gnome/rice6.png" style="max-width: 90%" />
             <br />
             <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
               Back to top
@@ -81,8 +74,10 @@ import "@/assets/blog.css";
           <details class="kde">
             <summary>KDE Plasma</summary>
             <img src="/images/rices/kde/rice.png" style="max-width: 90%" />
-            <br /><img src="/images/rices/kde/rice1.png" style="max-width: 90%" />
-            <br /><img src="/images/rices/kde/rice2.png" style="max-width: 90%" />
+            <br /><img src="/images/rices/kde/rice1.png" style="max-width: 90%" /> <br /><img
+              src="/images/rices/kde/rice2.png"
+              style="max-width: 90%"
+            />
             <br />
             <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
               Back to top

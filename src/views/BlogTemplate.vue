@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import "@/assets/blog.css";
-</script>
+<script setup lang="ts"></script>
 <template>
   <title>Blog template</title>
   <div class="container">
