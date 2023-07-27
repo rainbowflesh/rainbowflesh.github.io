@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Blog Spark</title>
   <div class="container">
@@ -415,6 +417,7 @@ val rdd2Data=rdd2.collect()
       <h3 id="dstream-%E5%92%8C-dstreamgraph-%E7%9A%84%E5%8C%BA%E5%88%AB">DStream 和 DStreamGraph 的区别</h3>
     </div>
   </div>
+  <BackToTopButton />
 </template>
 
 <style></style>

@@ -45,6 +45,11 @@
               </li>
               <li>
                 <nav>
+                  <RouterLink to="/2022/kafka">Kafka</RouterLink>
+                </nav>
+              </li>
+              <li>
+                <nav>
                   <RouterLink to="/2022/tello">Tello Hack</RouterLink>
                 </nav>
               </li>

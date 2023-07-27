@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Blog Tello Hack</title>
   <div class="container">
@@ -406,6 +408,7 @@ global_data = <span class="hljs-literal">None</span>
       </p>
     </div>
   </div>
+  <BackToTopButton />
 </template>
 
 <style>

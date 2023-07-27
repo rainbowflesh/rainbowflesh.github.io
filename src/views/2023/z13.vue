@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>z13 锐评</title>
   <div class="container">
@@ -92,6 +94,7 @@
       </p>
       <hr />
       <p>今日节目到此结束, 感谢各位观看, 回见!</p>
+      <BackToTopButton />
     </div>
   </div>
 </template>

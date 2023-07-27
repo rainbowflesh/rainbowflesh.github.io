@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Blog Hve</title>
   <div class="container">
@@ -517,6 +519,7 @@ set hive.optimize.cp = true;
       </blockquote>
     </div>
   </div>
+  <BackToTopButton />
 </template>
 
 <style></style>

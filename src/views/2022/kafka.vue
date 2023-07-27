@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Blog Kafka</title>
   <div class="container">
@@ -334,6 +336,7 @@
       <h3 id="kafka-%E8%93%84%E6%B0%B4%E6%B1%A0%E6%9C%BA%E5%88%B6">Kafka 蓄水池机制</h3>
     </div>
   </div>
+  <BackToTopButton />
 </template>
 
 <style></style>

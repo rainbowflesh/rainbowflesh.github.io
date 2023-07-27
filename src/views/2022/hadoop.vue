@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Hadoop 面经</title>
 
@@ -510,4 +512,5 @@
     </li>
     <li>通过 HDFS 进行 Job 配置文件, Jar 包的节点分发.</li>
   </ol>
+  <BackToTopButton />
 </template>

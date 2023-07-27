@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../../components/BackToTopButton.vue";
+</script>
 <template>
   <title>Python Dbus usage</title>
   <div class="container">
@@ -116,7 +118,8 @@ dbus.SystemBus().get_object(
             connection = settings_connection.GetSettings()
             <span class="hljs-comment"># 其实这个状态码有 ao 多, 更复杂的业务可以直接把状态返回出去在外部处理,</span>
             <span class="hljs-comment"># 这样更加符合单一职责规范, 但我就不😾</span>
-            <span class="hljs-keyword">if</span> (connection[<span class="hljs-string">"connection"</span>][<span class="hljs-string">"id"</span>] == ConnectionConfig.CONNECT_PROFILE_NAME <span class="hljs-keyword">and</span> state == <span class="hljs-number">2</span>):
+            <span class="hljs-keyword">if</span> (connection[<span class="hljs-string">"connection"</span>][<span class="hljs-string">"id"</span>] == ConnectionConfig.CONNECT_PROFILE_NAME <span class="hljs-keyword">and</span>
+            <span>state == <span class="hljs-number">2</span>):</span>
                 <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_connection</span><span class="hljs-params">(self, ssid: str)</span>:</span>
@@ -124,7 +127,8 @@ dbus.SystemBus().get_object(
         <span class="hljs-comment"># https://networkmanager.dev/docs/api/latest/ref-settings.html</span>
         connection_meta = dbus.Dictionary(
             {<span class="hljs-string">"type"</span>: <span class="hljs-string">"802-11-wireless"</span>,
-                <span class="hljs-string">"uuid"</span>: str(uuid.uuid4()), <span class="hljs-string">"id"</span>: ConnectionConfig.CONNECT_PROFILE_NAME, <span class="hljs-string">"interface-name"</span>: self._interface}
+                <span class="hljs-string">"uuid"</span>: str(uuid.uuid4()), <span class="hljs-string">"id"</span>: ConnectionConfig.CONNECT_PROFILE_NAME,<br/>
+                <span class="hljs-string">"interface-name"</span>: self._interface}
         )
         wifi_meta = dbus.Dictionary(
             {<span class="hljs-string">"ssid"</span>: dbus.ByteArray(ssid.encode(<span class="hljs-string">"utf-8"</span>)),
@@ -201,6 +205,7 @@ dbus.SystemBus().get_object(
       </p>
       <h2 id="%E5%90%8E%E8%AE%B0">后记</h2>
       <p>剧终.</p>
+      <BackToTopButton />
     </div>
   </div>
 </template>

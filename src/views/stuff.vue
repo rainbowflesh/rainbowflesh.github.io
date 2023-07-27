@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackToTopButton from "../components/BackToTopButton.vue";
+</script>
 <template>
   <div class="header">
     <p class="heading">Interesting Stuffs</p>
@@ -51,9 +53,6 @@
             <img src="/images/rices/gnome/rice5.png" style="max-width: 90%" />
             <img src="/images/rices/gnome/rice6.png" style="max-width: 90%" />
             <br />
-            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
-              Back to top
-            </button>
           </details>
         </li>
       </ul>
@@ -63,9 +62,6 @@
             <summary>windows 11</summary>
             <img src="/images/rices/windows/rice.png" style="max-width: 90%" />
             <br />
-            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
-              Back to top
-            </button>
           </details>
         </li>
       </ul>
@@ -79,12 +75,10 @@
               style="max-width: 90%"
             />
             <br />
-            <button class="btn" onclick="document.documentElement.scrollTop = 0;document.body.scrollTop = 0;">
-              Back to top
-            </button>
           </details>
         </li>
       </ul>
+      <BackToTopButton />
     </div>
   </div>
 </template>
