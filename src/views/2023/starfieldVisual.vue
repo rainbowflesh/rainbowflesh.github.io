@@ -48,16 +48,12 @@
         <br />
       </div>
       <div class="work">
-        <ul role="menu-bar">
-          <li role="menu-item" tabindex="0" aria-haspopup="false">
-            <a
-              target="_blank"
-              href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh.github.io/main/public/images/blogs/starfield/work.psd"
-              download="work.psd"
-              >Download 原始檔案</a
-            >
-          </li>
-        </ul>
+        <a
+          target="_blank"
+          href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh.github.io/main/public/images/blogs/starfield/work.psd"
+          download="work.psd"
+          ><button class="btn">Download 原始檔案</button></a
+        >
       </div>
     </div>
   </div>
