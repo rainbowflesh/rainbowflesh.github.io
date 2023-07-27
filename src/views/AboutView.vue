@@ -18,46 +18,76 @@ export default {
         <div class="self-introduce">
           <div data-target="readme-toc.content" class="Box-body px-5 pb-5">
             <article class="markdown-body entry-content container-lg" itemprop="text">
-              <img src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/oha.jpg"
-                alt="Ohayōgozaimasuha" style="max-width: 100%" />
+              <img
+                src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/oha.jpg"
+                alt="Ohayōgozaimasuha"
+                style="max-width: 100%"
+              />
               <h1 dir="auto">
-                <a id="user-content-hwllo-there-mnijikawa-a-data-scientist-desu" aria-hidden="true" href="#hwllo"><svg
-                    class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                    </path>
-                  </svg></a>Hwllo there<g-emoji
-                  fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png">👋</g-emoji>,
-                m'Rainbow`Flesh a Cybersecurity & UAV engineer desu
+                <a id="user-content-hwllo-there-mnijikawa-a-data-scientist-desu" aria-hidden="true" href="#hwllo"
+                  ><svg
+                    class="octicon octicon-link"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    ></path></svg></a
+                >Hwllo there<g-emoji fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
+                  >👋</g-emoji
+                >, m'Rainbow`Flesh a Cybersecurity specialist & UAV engineer desu
               </h1>
               <p dir="auto">I call myself a lofty tone geek.</p>
               <ul dir="auto">
-                <li>😎 Working in bit.edu.cn, R&D of CUAS!</li>
+                <li>😎 Working in bit.edu.cn!</li>
                 <li>📖 Read.</li>
                 <li>😍 I know nothing but Bishōjo ;)</li>
                 <li>📮 Reach me with email.</li>
                 <li>⚡ Fun fact: Woa! Actually I am cyber-alchemy-ork.</li>
                 <li>
-                  <a href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/hislinkedinprofile.jpg"
-                    rel="nofollow">Who Im I?</a>
+                  <a
+                    href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/hislinkedinprofile.jpg"
+                    rel="nofollow"
+                    >Who Im I?</a
+                  >
                 </li>
               </ul>
               <h2 dir="auto">
-                <a id="user-content-current-statue-" class="anchor" aria-hidden="true" href="#current-statue"><svg
-                    class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
-                    </path>
-                  </svg></a>current statue 👇
+                <a id="user-content-current-statue-" class="anchor" aria-hidden="true" href="#current-statue"
+                  ><svg
+                    class="octicon octicon-link"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+                    ></path></svg></a
+                >current statue 👇
               </h2>
               <p dir="auto">
-                <img src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat0.jpg"
-                  alt="Hunting-to-love" style="max-width: 100%" />
-                ><img src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat1.jpg"
-                  alt="tired" style="max-width: 100%; width: 200px" />
-                ><img src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/%F0%9F%A4%91.jpg" alt="🤑" style="max-width: 100%" />
+                <img
+                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat0.jpg"
+                  alt="Hunting-to-love"
+                  style="max-width: 100%"
+                />
+                ><img
+                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat1.jpg"
+                  alt="tired"
+                  style="max-width: 100%; width: 200px"
+                />
+                ><img
+                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/%F0%9F%A4%91.jpg"
+                  alt="🤑"
+                  style="max-width: 100%"
+                />
               </p>
             </article>
           </div>
