@@ -39,11 +39,11 @@ export default {
                     ></path></svg></a
                 >Hwllo there<g-emoji fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
                   >👋</g-emoji
-                >, m'Rainbow`Flesh a Cybersecurity specialist & UAV engineer desu
+                >, m'Rainbow`Flesh former CyberSecurity Specialist & UAV engineer desu
               </h1>
               <p dir="auto">I call myself a lofty tone geek.</p>
               <ul dir="auto">
-                <li>😎 Working in bit.edu.cn!</li>
+                <li>😎 Freelancer, seeking for a job!</li>
                 <li>📖 Read.</li>
                 <li>😍 I know nothing but Bishōjo ;)</li>
                 <li>📮 Reach me with email.</li>
