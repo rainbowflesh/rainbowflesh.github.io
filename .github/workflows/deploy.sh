@@ -11,4 +11,4 @@ git commit -m 'deploy'
 # git push -f git@github.com:<username>/<username>.github.io.git
 
 git push -f git@github.com:rainbowflesh/rainbowflesh.github.io.git
-# git push -f https://github.com/rainbowflesh/rainbowflesh.github.io.git
+# git push -f --set-upstream https://github.com/rainbowflesh/rainbowflesh.github.io.git release
