@@ -39,11 +39,11 @@ export default {
                     ></path></svg></a
                 >Hwllo there<g-emoji fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
                   >👋</g-emoji
-                >, m'Rainbow`Flesh former CyberSecurity Specialist & UAV engineer desu
+                >, m'Rainbow`Flesh former CyberSecurity Specialist & UAV Engineer desu
               </h1>
               <p dir="auto">I call myself a lofty tone geek.</p>
               <ul dir="auto">
-                <li>😎 Freelancer, seeking for a job!</li>
+                <li>😎 Freelancer, focus on open source!</li>
                 <li>📖 Read.</li>
                 <li>😍 I know nothing but Bishōjo ;)</li>
                 <li>📮 Reach me with email.</li>
@@ -74,6 +74,11 @@ export default {
               </h2>
               <p dir="auto">
                 <img
+                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat2.jpg"
+                  alt="Shikeiblodmark"
+                  style="max-width: 100%"
+                />
+                <img
                   src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat0.jpg"
                   alt="Hunting-to-love"
                   style="max-width: 100%"
@@ -94,7 +99,7 @@ export default {
         </div>
         <div class="standard-dialog center scale-down copy-right" style="width: 30rem">
           <h1 class="dialog-text">The RainbowFlesh's Blog, Version .42 (0625)</h1>
-          <p class="dialog-text">&copy; 1996 Flesh Computer</p>
+          <p class="dialog-text">&copy; 2001 Flesh Computer</p>
         </div>
       </div>
     </div>
