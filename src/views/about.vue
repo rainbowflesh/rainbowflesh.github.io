@@ -37,25 +37,19 @@ export default {
                       fill-rule="evenodd"
                       d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
                     ></path></svg></a
-                >Hwllo there<g-emoji fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
-                  >👋</g-emoji
-                >, m'Rainbow`Flesh former CyberSecurity Specialist & UAV Engineer desu
+                >Greeting fellow!
               </h1>
-              <p dir="auto">I call myself a lofty tone geek.</p>
+              <p dir="auto">I'm RainbowFlesh former Counter-Unmanned-Aerial-Systems Researcher.</p>
               <ul dir="auto">
                 <li>😎 Freelancer, focus on open source!</li>
-                <li>📖 Read.</li>
-                <li>😍 I know nothing but Bishōjo ;)</li>
-                <li>📮 Reach me with email.</li>
-                <li>⚡ Fun fact: Woa! Actually I am cyber-alchemy-ork.</li>
+                <li>🏋️ Seasoned in cybersecurity and UAV Swarm networking, hacking, and simulating :p</li>
+                <li>🎧📷🎨✏️🔬 HIFI user, photographer, artist, writer, translator, scientist.</li>
+                <li>🤓 Trainning the "taste" for programming.</li>
                 <li>
-                  <a
-                    href="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/hislinkedinprofile.jpg"
-                    rel="nofollow"
-                    >Who Im I?</a
-                  >
+                  <a href="https://github.com/rainbowflesh" rel="nofollow">Who Im I?</a>
                 </li>
               </ul>
+              <p dir="auto">I call myself a lofty tone geek.</p>
               <h2 dir="auto">
                 <a id="user-content-current-statue-" class="anchor" aria-hidden="true" href="#current-statue"
                   ><svg
@@ -74,6 +68,11 @@ export default {
               </h2>
               <p dir="auto">
                 <img
+                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat1.jpg"
+                  alt="Shikeiblodmark"
+                  style="max-width: 100%"
+                />
+                <img
                   src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat2.jpg"
                   alt="Shikeiblodmark"
                   style="max-width: 100%"
@@ -82,11 +81,6 @@ export default {
                   src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat0.jpg"
                   alt="Hunting-to-love"
                   style="max-width: 100%"
-                />
-                ><img
-                  src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/stat1.jpg"
-                  alt="tired"
-                  style="max-width: 100%; width: 200px"
                 />
                 ><img
                   src="https://raw.githubusercontent.com/rainbowflesh/rainbowflesh/main/asset/images/memes/%F0%9F%A4%91.jpg"
@@ -98,7 +92,7 @@ export default {
           </div>
         </div>
         <div class="standard-dialog center scale-down copy-right" style="width: 30rem">
-          <h1 class="dialog-text">The RainbowFlesh's Blog, Version .42 (0625)</h1>
+          <h1 class="dialog-text">The RainbowFlesh's Blog, Version .42 (1126)</h1>
           <p class="dialog-text">&copy; 2001 Flesh Computer</p>
         </div>
       </div>

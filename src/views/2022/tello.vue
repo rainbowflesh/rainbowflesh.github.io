@@ -22,8 +22,8 @@ import BackToTopButton from "../../components/BackToTopButton.vue";
       <p>Two Wi-Fi cards are also required, one of which must be in monitor mode.</p>
       <blockquote>
         <p>
-          I chose the RK3399 chip as the card, but the RockPi pre-built Ubuntu Focal <strong>didn't enable</strong> this
-          driver by default; choose a right device make your life easier.
+          I use 8188ru NIC, but the RockPi pre-built Ubuntu Focal <strong>didn't enable</strong> this driver by default;
+          choose a right device make your life easier.
         </p>
       </blockquote>
       <p>This system use front-end and back-end separated web service architecture, based on Ubuntu Server OS.</p>

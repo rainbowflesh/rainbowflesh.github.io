@@ -20,7 +20,11 @@
         <div class="title-bar"></div>
         <div>
           友链:
-          <p class="font-effect-anaglyph">naidesu</p>
+          <ul>
+            <li>
+              <a class="font-effect-anaglyph" href="https://donaldturinglee.com/">donaldturinglee.com</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -30,5 +34,6 @@
 <style scoped>
 .font-effect-anaglyph {
   text-shadow: -0.1em 0 red, 0.1em 0 #0ff;
+  font-size: 0.5rem;
 }
 </style>
