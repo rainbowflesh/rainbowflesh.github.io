@@ -51,3 +51,4 @@ export default {
   text-shadow: -0.1em 0 red, 0.1em 0 #0ff;
 }
 </style>
+./components/LeftSidebar.tsx

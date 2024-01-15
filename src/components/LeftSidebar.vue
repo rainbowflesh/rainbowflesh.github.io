@@ -21,63 +21,11 @@
         <li>
           Blogs
           <ul>
-            <details>
-              <summary>2022</summary>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/kismet">Kismet usage record</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/hadoop">Hadoop</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/hive">Hive</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/spark">Spark</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/kafka">Kafka</RouterLink>
-                </nav>
-              </li>
-              <li>
-                <nav>
-                  <RouterLink to="/2022/tello">Tello Hack</RouterLink>
-                </nav>
-              </li>
-              <br />
-            </details>
+            <BlogList2022></BlogList2022>
+            <BlogList2023></BlogList2023>
             <li>
               <nav>
-                <RouterLink to="/2023/marp">Marp</RouterLink>
-              </nav>
-            </li>
-            <li>
-              <nav>
-                <RouterLink to="/2023/z13">Rog Flow z13 2023</RouterLink>
-              </nav>
-            </li>
-            <li>
-              <nav>
-                <RouterLink to="/2023/droneSim">无人机集群仿真</RouterLink>
-              </nav>
-            </li>
-            <li>
-              <nav>
-                <RouterLink to="/2023/pyDbus">Python & Dbus</RouterLink>
-              </nav>
-            </li>
-            <li>
-              <nav>
-                <RouterLink to="/2023/starfieldVisual">Starfield Visual</RouterLink>
+                <RouterLink to="/2024/hAPpYneWyEAr"> hAPpYneWyEAr </RouterLink>
               </nav>
             </li>
           </ul>
@@ -96,3 +44,13 @@
     </div>
   </div>
 </template>
+<script>
+import BlogList2023 from "../views/2023/BlogList.vue";
+import BlogList2022 from "../views/2022/BlogList.vue";
+export default {
+  components: {
+    BlogList2023: BlogList2023,
+    BlogList2022: BlogList2022,
+  },
+};
+</script>
