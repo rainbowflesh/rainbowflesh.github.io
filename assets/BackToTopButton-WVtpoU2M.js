@@ -1,0 +1,1 @@
+import{_ as o,o as c,c as t}from"./index-uTKRgJj0.js";const e={},n={class:"btn",onclick:"document.documentElement.scrollTop = 0;document.body.scrollTop = 0;"};function s(r,_){return c(),t("button",n,"Back to top")}const l=o(e,[["render",s]]);export{l as B};

@@ -1,9 +1,9 @@
-import{B as n}from"./BackToTopButton.4b5a936b.js";import{d as u,o as a,c as e,a as s,b as t,F as o,e as p}from"./index.f6e50d68.js";const c=s("title",null,"Python Dbus usage",-1),l={class:"container"},r={class:"content"},i=p(`<h1 id="let-python-use-dbus">Let python use Dbus</h1><blockquote><p>\u4E0A\u63A5 tello_hack.md</p></blockquote><p> \u65E0\u4EBA\u673A\u7834\u89E3\u5B8C\u6210\u540E, \u9700\u8981\u8BA9\u5730\u9762\u7AD9\u8FDE\u63A5\u4E0A\u65E0\u4EBA\u673A, \u8003\u8651\u5230\u5730\u9762\u7AD9\u8FD0\u884C\u7684 ubuntu \u7CFB\u7EDF\u81EA\u5E26 network-manager \u8FD9\u4E48\u4E00\u4E2A\u8F6F\u4EF6, \u7528\u8FDB\u7A0B\u95F4\u901A\u4FE1\u7684\u65B9\u5F0F\u53BB\u63A7\u5236 wifi \u521B\u5EFA, \u8FDE\u63A5\u548C\u65AD\u5F00\u518D\u597D\u4E0D\u8FC7\u4E86; </p><p> \u9009\u62E9 <a href="https://dbus.freedesktop.org/doc/dbus-tutorial.html">D-bus</a> \u4F5C\u4E3A ipc \u7CFB\u7EDF, \u5F00\u53D1\u8D77\u6765\u8FD8\u662F\u86EE\u7B80\u5355\u7684, \u5C31\u662F\u7EF4\u62A4\u706B\u846C\u573A. </p><p><code>D-bus</code> \u7528\u8D77\u6765\u751A\u81F3\u6709\u70B9\u50CF\u64CD\u4F5C json, \u6BD4\u5982\u83B7\u5F97\u4E00\u4E2A dbus API \u662F\u8FD9\u6837\u5B50\u7684:</p><pre class="hljs"><code><div><span class="hljs-comment"># get api obj eg:</span>
+import{B as n}from"./BackToTopButton-WVtpoU2M.js";import{d as a,o as e,c as t,a as s,b as o,F as p,e as c}from"./index-uTKRgJj0.js";const l=s("title",null,"Python Dbus usage",-1),r={class:"container"},i={class:"content"},u=c(`<h1 id="let-python-use-dbus">Let python use Dbus</h1><blockquote><p>上接 tello_hack.md</p></blockquote><p> 无人机破解完成后, 需要让地面站连接上无人机, 考虑到地面站运行的 ubuntu 系统自带 network-manager 这么一个软件, 用进程间通信的方式去控制 wifi 创建, 连接和断开再好不过了; </p><p> 选择 <a href="https://dbus.freedesktop.org/doc/dbus-tutorial.html">D-bus</a> 作为 ipc 系统, 开发起来还是蛮简单的, 就是维护火葬场. </p><p><code>D-bus</code> 用起来甚至有点像操作 json, 比如获得一个 dbus API 是这样子的:</p><pre class="hljs"><code><div><span class="hljs-comment"># get api obj eg:</span>
 dbus.SystemBus().get_object(
             <span class="hljs-string">&quot;org.freedesktop.NetworkManager&quot;</span>,
             <span class="hljs-string">&quot;/org/freedesktop/NetworkManager/Settings&quot;</span>
             )
-</div></code></pre><p> \u8FD9\u4E2A\u73A9\u610F\u513F\u7406\u89E3\u8D77\u6765\u5C31\u662F, \u4ECE <code>dbus</code> \u8DEF\u5F84 <code>org.freedesktop.NetworkManager</code> \u4E0B\u83B7\u5F97 <code>/org/freedesktop/NetworkManager/Settings</code> \u5BF9\u8C61, \u{1F611}\u6CA1\u9519\u8FD9\u662F\u4E2A\u5BF9\u8C61, \u5305\u542B\u4E86\u5404\u79CD\u63A5\u4E0B\u6765\u6240\u9700\u7684\u65B9\u6CD5\u7684\u5BF9\u8C61; \u81F3\u4E8E\u8FD9\u4E2A\u5BF9\u8C61\u7684\u5B9A\u4E49, \u8FD8\u8981\u4ECE<a href="https://people.freedesktop.org/~lkundrak/nm-docs/gdbus-org.freedesktop.NetworkManager.Settings.html">\u6587\u6863</a>\u91CC\u770B\u8D77; </p><p>\u{1F602} \u4F5C\u4E3A\u4E00\u4E2A\u6389\u5305\u4FA0, \u4E60\u60EF\u76F4\u63A5\u770B\u6E90\u7801\u731C\u7528\u6CD5, \u4F46\u8FD9\u6B21\u8001\u8001\u5B9E\u5B9E\u4E0A\u7F51\u627E\u6587\u6863\u624D\u770B\u660E\u767D\u600E\u4E48\u7528.</p><p>ps: \u7528 <code>D-Feet</code> \u8FD9\u4E2A\u8F6F\u4EF6\u53EF\u4EE5\u76F4\u63A5\u8C03\u8BD5 dbus, \u597D\u7528\u7684\u5F88, \u7528\u8D77\u6765\u8DDF\u4E0A\u9762\u4E00\u6837\u7167\u7740\u6587\u6863\u5199\u53C2\u6570 \u{1F972}.</p><h2 id="example">Example</h2><p> \u57FA\u672C\u4E0A\u662F\u4ECE<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/vpn.py">\u8FD9\u91CC</a>\u548C<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/add-connection.py">\u8FD9\u91CC</a>\u6284\u8FC7\u6765\u6539\u5427\u6539\u5427\u505A\u51FA\u6765\u7684\u4E1C\u897F. </p><pre class="hljs"><code><div><span class="hljs-keyword">import</span> logging
+</div></code></pre><p> 这个玩意儿理解起来就是, 从 <code>dbus</code> 路径 <code>org.freedesktop.NetworkManager</code> 下获得 <code>/org/freedesktop/NetworkManager/Settings</code> 对象, 😑没错这是个对象, 包含了各种接下来所需的方法的对象; 至于这个对象的定义, 还要从<a href="https://people.freedesktop.org/~lkundrak/nm-docs/gdbus-org.freedesktop.NetworkManager.Settings.html">文档</a>里看起; </p><p>😂 作为一个掉包侠, 习惯直接看源码猜用法, 但这次老老实实上网找文档才看明白怎么用.</p><p>ps: 用 <code>D-Feet</code> 这个软件可以直接调试 dbus, 好用的很, 用起来跟上面一样照着文档写参数 🥲.</p><h2 id="example">Example</h2><p> 基本上是从<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/vpn.py">这里</a>和<a href="https://github.com/NetworkManager/NetworkManager/blob/main/examples/python/dbus/add-connection.py">这里</a>抄过来改吧改吧做出来的东西. </p><pre class="hljs"><code><div><span class="hljs-keyword">import</span> logging
 <span class="hljs-keyword">import</span> uuid
 <span class="hljs-keyword">import</span> dbus
 
@@ -24,8 +24,8 @@ dbus.SystemBus().get_object(
         }
         self._interface = ConnectionConfig.CONNECTOR_INTERFACE
 
-        <span class="hljs-comment"># \u8FEB\u4E8E\u4E0D\u77E5\u9053 python \u662F\u600E\u4E48\u5783\u573E\u56DE\u6536\u7684, \u5728\u5D4C\u5165\u5F0F\u7CFB\u7EDF\u91CC\u8DD1\u957F\u671F\u4EFB\u52A1\u8F6F\u4EF6,</span>
-        <span class="hljs-comment"># \u9009\u62E9\u53EA\u5B9E\u4F8B\u5316\u4E00\u4E2A \`dbus.SystemBus()\`, \u514D\u5F97\u641E\u592A\u591A\u5BF9\u8C61\u7ED9 oom \u4E86.</span>
+        <span class="hljs-comment"># 迫于不知道 python 是怎么垃圾回收的, 在嵌入式系统里跑长期任务软件,</span>
+        <span class="hljs-comment"># 选择只实例化一个 \`dbus.SystemBus()\`, 免得搞太多对象给 oom 了.</span>
         self._bus = dbus.SystemBus()
         self._connection_proxy = self._bus.get_object(
             <span class="hljs-string">&quot;org.freedesktop.NetworkManager&quot;</span>,
@@ -45,12 +45,12 @@ dbus.SystemBus().get_object(
             self._connection_proxy, dbus_interface=<span class="hljs-string">&quot;org.freedesktop.NetworkManager.Settings&quot;</span>
         )
         self._device_path = self.get_device_path()
-        <span class="hljs-comment"># \u{1F60E} \u4E0A\u9762\u8FD9\u4E00\u5927\u4E32\u4EE5\u53CA\u63A5\u4E0B\u6765\u7684\u4E00\u5927\u4E32\u90FD\u4E25\u683C\u6309\u7167</span>
+        <span class="hljs-comment"># 😎 上面这一大串以及接下来的一大串都严格按照</span>
         <span class="hljs-comment"># https://coderlmn.github.io/frontEndCourse/unmaintainable.html</span>
-        <span class="hljs-comment"># \u548C</span>
+        <span class="hljs-comment"># 和</span>
         <span class="hljs-comment"># https://testing.googleblog.com/2008/07/how-to-write-3v1l-untestable-code.html</span>
-        <span class="hljs-comment"># \u7F16\u5199.</span>
-        <span class="hljs-comment"># \u4E0D\u8981\u558A\u6211\u6765\u7EF4\u62A4, \u4E00\u6B21\u6027\u7684\u7A0B\u5E8F\u7EDD\u5BF9\u6CA1\u6709\u66F4\u65B0\u8FED\u4EE3. (\u9003</span>
+        <span class="hljs-comment"># 编写.</span>
+        <span class="hljs-comment"># 不要喊我来维护, 一次性的程序绝对没有更新迭代. (逃</span>
 
     <span class="hljs-comment"># true = activated</span>
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_connection_statue</span><span class="hljs-params">(self)</span>:</span>
@@ -58,8 +58,8 @@ dbus.SystemBus().get_object(
             self._device_proxy, <span class="hljs-string">&quot;org.freedesktop.DBus.Properties&quot;</span>)
         activated_connections = manager_prop_iface.Get(
             <span class="hljs-string">&quot;org.freedesktop.NetworkManager&quot;</span>, <span class="hljs-string">&quot;ActiveConnections&quot;</span>)
-        <span class="hljs-comment"># \u6CA1\u770B\u61C2? \u8FD9\u4E9B\u5176\u5B9E\u5168\u90FD\u662F\u4ECE\u5BF9\u8C61\u91CC\u53D6\u5BF9\u8C61, Get(&quot;\u5BF9\u8C61A&quot;, &quot;\u5BF9\u8C61A\u7684balabala\u65B9\u6CD5&quot;)</span>
-        <span class="hljs-comment"># \u81F3\u4E8E\u4E3A\u5565\u90FD\u662F\u5B57\u7B26\u4E32, \u5C0F\u7F16\u4E5F\u4E0D\u77E5\u9053.</span>
+        <span class="hljs-comment"># 没看懂? 这些其实全都是从对象里取对象, Get(&quot;对象A&quot;, &quot;对象A的balabala方法&quot;)</span>
+        <span class="hljs-comment"># 至于为啥都是字符串, 小编也不知道.</span>
 
         <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> activated_connections:
             ac_proxy = self._bus.get_object(
@@ -77,14 +77,14 @@ dbus.SystemBus().get_object(
                 con_proxy, <span class="hljs-string">&quot;org.freedesktop.NetworkManager.Settings.Connection&quot;</span>
             )
             connection = settings_connection.GetSettings()
-            <span class="hljs-comment"># \u5176\u5B9E\u8FD9\u4E2A\u72B6\u6001\u7801\u6709 ao \u591A, \u66F4\u590D\u6742\u7684\u4E1A\u52A1\u53EF\u4EE5\u76F4\u63A5\u628A\u72B6\u6001\u8FD4\u56DE\u51FA\u53BB\u5728\u5916\u90E8\u5904\u7406,</span>
-            <span class="hljs-comment"># \u8FD9\u6837\u66F4\u52A0\u7B26\u5408\u5355\u4E00\u804C\u8D23\u89C4\u8303, \u4F46\u6211\u5C31\u4E0D\u{1F63E}</span>
+            <span class="hljs-comment"># 其实这个状态码有 ao 多, 更复杂的业务可以直接把状态返回出去在外部处理,</span>
+            <span class="hljs-comment"># 这样更加符合单一职责规范, 但我就不😾</span>
             <span class="hljs-keyword">if</span> (connection[<span class="hljs-string">&quot;connection&quot;</span>][<span class="hljs-string">&quot;id&quot;</span>] == ConnectionConfig.CONNECT_PROFILE_NAME <span class="hljs-keyword">and</span>
             <span>state == <span class="hljs-number">2</span>):</span>
                 <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_connection</span><span class="hljs-params">(self, ssid: str)</span>:</span>
-        <span class="hljs-comment"># \u5B8C\u6574\u7684\u914D\u7F6E\u9879\u53EF\u4EE5\u5728\u8FD9\u91CC\u627E\u5230:</span>
+        <span class="hljs-comment"># 完整的配置项可以在这里找到:</span>
         <span class="hljs-comment"># https://networkmanager.dev/docs/api/latest/ref-settings.html</span>
         connection_meta = dbus.Dictionary(
             {<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;802-11-wireless&quot;</span>,
@@ -108,7 +108,7 @@ dbus.SystemBus().get_object(
         profile_path = (
             self._connection_settings.AddConnectionUnsaved(connection_profile))
 
-        <span class="hljs-comment"># \u8FDE\u63A5\u4E00\u4E2A wifi \u53EA\u9700\u8981\u8FD9\u6837, \u7136\u540E\u8FD9\u6837, \u8FD9\u6837\u5B8C\u4E86\u5C31\u8FDE\u4E0A\u8FA3.</span>
+        <span class="hljs-comment"># 连接一个 wifi 只需要这样, 然后这样, 这样完了就连上辣.</span>
         self.activate_connection(profile_path)
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">activate_connection</span><span class="hljs-params">(self, profile_path)</span>:</span>
@@ -118,7 +118,7 @@ dbus.SystemBus().get_object(
                 self._device_path,
                 <span class="hljs-string">&quot;/&quot;</span>)
         <span class="hljs-keyword">except</span>:
-            <span class="hljs-comment"># \u6709\u9519\u8BEF\u5904\u7406, \u4F46\u4E0D\u5B8C\u5168\u5904\u7406.jpg</span>
+            <span class="hljs-comment"># 有错误处理, 但不完全处理.jpg</span>
             logging.error(<span class="hljs-string">&quot;Failed to connect wifi, possible already connected&quot;</span>)
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disconnect</span><span class="hljs-params">(self)</span>:</span>
@@ -127,7 +127,7 @@ dbus.SystemBus().get_object(
         dev_iface = dbus.Interface(
             device_proxy, <span class="hljs-string">&quot;org.freedesktop.NetworkManager.Device&quot;</span>)
         dev_iface.Disconnect()
-        <span class="hljs-comment"># \u8FD9\u4E2A\u5199\u6CD5\u4E0D\u5B58\u5728 \`\u65AD\u5F00\u4E00\u4E2A\u4E0D\u5B58\u5728\u7684\u8FDE\u63A5\u914D\u7F6E\`, \u4E0D\u7528\u5904\u7406\u9519\u8BEF.</span>
+        <span class="hljs-comment"># 这个写法不存在 \`断开一个不存在的连接配置\`, 不用处理错误.</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">remove_connection</span><span class="hljs-params">(self)</span>:</span>
         connection_paths = self._connection_settings.ListConnections()
@@ -139,11 +139,11 @@ dbus.SystemBus().get_object(
             connection = settings_connection.GetSettings()
             <span class="hljs-keyword">if</span> (connection[<span class="hljs-string">&quot;connection&quot;</span>][<span class="hljs-string">&quot;id&quot;</span>] == ConnectionConfig.CONNECT_PROFILE_NAME):
                 settings_connection.Delete()
-            <span class="hljs-comment"># \u5982\u679C\u8FD9\u4E2A\u65B9\u6CD5\u88AB\u5F02\u6B65\u7684\u4E1C\u897F\u540C\u65F6\u8C03\u7528\u4E86\u4E24\u6B21, \u4F1A\u6709\u4E00\u6B21\u662F\u5C1D\u8BD5\u5220\u9664\u865A\u7A7A\u914D\u7F6E, \u7136\u540E\u62A5\u9519.</span>
-            <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> \u9519\u8BEF\u5904\u7406</span>
-            <span class="hljs-comment"># <span class="hljs-doctag">FIXME:</span> \u5173\u6211\u5C41\u4E8B, \u{1F638}\u5B9E\u8DF5\u8BC1\u660E\u4E0D\u5B58\u5728\u8FD9\u79CD\u60C5\u51B5\u5566.</span>
+            <span class="hljs-comment"># 如果这个方法被异步的东西同时调用了两次, 会有一次是尝试删除虚空配置, 然后报错.</span>
+            <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> 错误处理</span>
+            <span class="hljs-comment"># <span class="hljs-doctag">FIXME:</span> 关我屁事, 😸实践证明不存在这种情况啦.</span>
 
-    <span class="hljs-comment"># \u8FD9\u4E2A\u65B9\u6CD5\u7528\u6765\u83B7\u5F97\u7F51\u5361\u5728 dbus \u91CC\u4F5C\u4E3A\u5BF9\u8C61\u65F6\u5019\u7684\u5BF9\u8C61.</span>
+    <span class="hljs-comment"># 这个方法用来获得网卡在 dbus 里作为对象时候的对象.</span>
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_device_path</span><span class="hljs-params">(self)</span>:</span>
         devices = self._device_manager.GetDevices()
         <span class="hljs-keyword">for</span> device_path <span class="hljs-keyword">in</span> devices:
@@ -156,4 +156,4 @@ dbus.SystemBus().get_object(
             <span class="hljs-keyword">if</span> (iface == self._interface):
                 <span class="hljs-keyword">return</span> device_path
 
-</div></code></pre><h2 id="%E5%8F%82%E8%80%83">\u53C2\u8003</h2><p><a href="https://people.freedesktop.org/~lkundrak/nm-docs/spec.html">NetworkManager D-Bus API Reference</a></p><p><a href="https://github.com/NetworkManager/NetworkManager/tree/main/examples/python/dbus">NetworkManager Python Dbus Example</a></p><h2 id="%E5%90%8E%E8%AE%B0">\u540E\u8BB0</h2><p>\u5267\u7EC8.</p>`,17),j=u({__name:"pyDbus",setup(h){return(E,d)=>(a(),e(o,null,[c,s("div",l,[s("div",r,[i,t(n)])])],64))}});export{j as default};
+</div></code></pre><h2 id="%E5%8F%82%E8%80%83">参考</h2><p><a href="https://people.freedesktop.org/~lkundrak/nm-docs/spec.html">NetworkManager D-Bus API Reference</a></p><p><a href="https://github.com/NetworkManager/NetworkManager/tree/main/examples/python/dbus">NetworkManager Python Dbus Example</a></p><h2 id="%E5%90%8E%E8%AE%B0">后记</h2><p>剧终.</p>`,17),_=a({__name:"pyDbus",setup(h){return(d,g)=>(e(),t(p,null,[l,s("div",r,[s("div",i,[u,o(n)])])],64))}});export{_ as default};
