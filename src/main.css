@@ -4,9 +4,31 @@
 }
 
 @font-face {
+  font-family: "RainbowFleshNBP";
+  src: url("/fonts/RainbowFleshNBP.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: Chicago_12;
   src: url("fonts/ChiKareGo2.ttf");
 }
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.text {
+  padding-left: 20px;
+}
+
 blockquote {
   font-size: 14px;
   text-align: left;

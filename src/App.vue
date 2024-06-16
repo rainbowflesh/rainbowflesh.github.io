@@ -2,7 +2,6 @@
 import { RouterView } from "vue-router";
 import LeftSidebar from "./components/LeftSidebar.vue";
 import RightSidebar from "./components/RightSidebar.vue";
-import "@/assets/blog.css";
 </script>
 <script lang="ts">
 export default {

@@ -22,7 +22,8 @@ import RainbowText from "../components/RainbowText.vue";
           </blockquote>
         </div>
         <div class="content" style="padding-left: 20px">
-          <span style="">Welcome to my blog</span>
+          <span style="">Welcome to my </span
+          ><span style="font-family: 'RainbowFleshNBP', sans-serif; font-size: larger">blog</span>
           <p>I create this blog for record my technic working life,</p>
           <p>And sharding interesting stuff for ya.</p>
         </div>
