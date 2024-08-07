@@ -1,20 +1,26 @@
-import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import react from "@vitejs/plugin-react-swc";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
+  plugins: [react()],
   server: {
     fs: {
       strict: false,
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": new URL("./src", import.meta.url).pathname,
+      "@components": new URL("./src/components", import.meta.url).pathname,
+      "@utils": new URL("./src/utils", import.meta.url).pathname,
+      "@pages": new URL("./src/pages", import.meta.url).pathname,
     },
   },
 });

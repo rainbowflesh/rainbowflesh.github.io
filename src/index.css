@@ -1,0 +1,734 @@
+@font-face {
+  font-family: Geneva9;
+  src: url("fonts/FindersKeepers.ttf");
+}
+
+@font-face {
+  font-family: "RainbowFleshNBP";
+  src: url("/fonts/RainbowFleshNBP.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Chicago_12;
+  src: url("fonts/ChiKareGo2.ttf");
+}
+
+:root {
+  --color-background: #31037d;
+  --axis-x: -4px;
+  --axis-y: 0.5rem;
+  --delay: 7;
+  --font-name: Righteous;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-darkgrey: #424242;
+    --color-lightgrey: #d9d9d9;
+    --color-coldgrey: #dbdce5;
+    --color-orange: #d49c3d;
+    --color-red: #d14b3d;
+    --color-violet: #cf52eb;
+    --color-blue: #44a3f7;
+    --color-green: #5acb3c;
+    --color-yellow: #debf40;
+    --color-foreground: var(--color-white);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-darkgrey: #424242;
+    --color-lightgrey: #d9d9d9;
+    --color-coldgrey: #dbdce5;
+    --color-grey: #c9c9c9;
+    --color-orange: #ffa200;
+    --color-red: #ff1900;
+    --color-violet: #dc3eff;
+    --color-blue: #1d96ff;
+    --color-green: #5cff2f;
+    --color-yellow: #ffd52e;
+    --color-foreground: var(--color-black);
+    --primary: var(--color-black) !important;
+    --secondary: var(--color-white) !important;
+    --tertiary: var(--color-grey) !important;
+    --disabled: var(--color-darkgrey) !important;
+  }
+
+  body {
+    background: linear-gradient(90deg, #000 21px, transparent 1%) 50%, linear-gradient(#000 21px, transparent 1%) 50%,
+      #fff;
+    background-attachment: fixed;
+    background-size: 22px 22px;
+    color: var(--color-white);
+  }
+
+  a {
+    color: #cbcbcb;
+  }
+
+  .apple {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='22' viewBox='0 0 9 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0h2v1H5zM4 1h2v1H4zM4 2h1v1H4zM1 3h3v1H1zM5 3h3v1H5zM0 4h9v1H0zM0 5h7v2H0zM0 7h9v2H0zM1 9h7v1H1zM2 10h2v1H2zM5 10h2v1H5z' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    border: none;
+    display: inline-block;
+    height: 22px;
+    margin-right: 2px;
+    width: 18px;
+  }
+  .window,
+  .standard-dialog,
+  .title-bar .title,
+  .details-bar,
+  .btn {
+    background-color: var(--primary);
+    border-color: var(--secondary) !important;
+  }
+  .btn,
+  .btn-default {
+    border-image: url("data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M61%200H20V6H14H6V14V20H0V61H6V67V75H14H20V81H61V75H67H75V67V61H81V20H75V14V6H67H61V0ZM74%2021H67V14H60V7H21V14H14V21H7V60H14V67H21V74H60V67H67V60H74V21Z'%20fill='white'/%3e%3c/svg%3e")
+      30 stretch;
+    border-style: solid;
+    border-width: 5.5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Chicago_12;
+    font-size: 18px;
+    min-height: 20px;
+    min-width: 59px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .title-bar {
+    background: linear-gradient(#fff 50%, transparent 0);
+    background-clip: content-box;
+    background-size: 6.6666666667% 13.3333333333%;
+  }
+
+  blockquote {
+    border-color: var(--secondary) !important;
+  }
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+
+ul,
+ol,
+menu {
+  counter-reset: list-item;
+}
+
+ul,
+menu,
+dir {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: match-parent;
+}
+
+p,
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+h1 {
+  color: var(--color-coldgrey);
+}
+
+h2,
+h3 {
+  color: var(--color-lightgrey);
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-block: 1em;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-block: 1.33em;
+}
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 20px;
+  width: 80%;
+  font-size: 14px;
+  border: 1px solid;
+  border-color: var(--primary);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote footer {
+  margin: 12px 0 0 12px;
+  font-size: 11px;
+}
+
+.heading {
+  font-size: 3rem;
+}
+.window {
+  min-width: 280px;
+}
+.window-pane {
+  height: auto;
+}
+.layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-effect-anaglyph {
+  text-shadow: -0.1em 0 red, 0.1em 0 #0ff;
+}
+
+.RainbowFleshNBP {
+  font-family: RainbowFleshNBP;
+}
+
+.Geneva_9 {
+  font-family: Geneva_9;
+}
+
+.Chicago {
+  font-family: Chicago;
+}
+
+.Chicago_12 {
+  font-family: Chicago_12;
+}
+
+code {
+  font-family: "Space Mono", monospace;
+}
+
+.c-rainbow {
+  counter-reset: rainbow;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c-rainbow__layer {
+  --text-color: var(--color-foreground);
+  counter-increment: rainbow;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black),
+    1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
+  animation: rainbow 1.5s ease-in-out infinite;
+}
+
+.c-rainbow__layer:nth-child(1) {
+  animation-delay: calc(1 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 1);
+  z-index: -10;
+}
+
+.c-rainbow__layer:nth-child(2) {
+  animation-delay: calc(2 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 2);
+  z-index: -20;
+}
+
+.c-rainbow__layer:nth-child(3) {
+  animation-delay: calc(3 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 3);
+  z-index: -30;
+}
+
+.c-rainbow__layer:nth-child(4) {
+  animation-delay: calc(4 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 4);
+  z-index: -40;
+}
+
+.c-rainbow__layer:nth-child(5) {
+  animation-delay: calc(5 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 5);
+  z-index: -50;
+}
+
+.c-rainbow__layer:nth-child(6) {
+  animation-delay: calc(6 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 6);
+  z-index: -60;
+}
+
+.c-rainbow__layer:nth-child(7) {
+  animation-delay: calc(7 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 7);
+  z-index: -70;
+}
+
+.c-rainbow__layer:nth-child(8) {
+  animation-delay: calc(7 / var(--delay) * 1s);
+  left: calc(var(--axis-x) * 7);
+  z-index: -70;
+}
+
+.c-rainbow__layer:not(:first-child) {
+  position: absolute;
+  top: 0;
+}
+
+.c-rainbow__layer--white {
+  --text-color: var(--color-white);
+}
+
+.c-rainbow__layer--orange {
+  --text-color: var(--color-orange);
+}
+
+.c-rainbow__layer--red {
+  --text-color: var(--color-red);
+}
+
+.c-rainbow__layer--violet {
+  --text-color: var(--color-violet);
+}
+
+.c-rainbow__layer--blue {
+  --text-color: var(--color-blue);
+}
+
+.c-rainbow__layer--green {
+  --text-color: var(--color-green);
+}
+
+.c-rainbow__layer--yellow {
+  --text-color: var(--color-yellow);
+}
+
+.c-rainbow__layer--back {
+  --text-color: #000;
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+    transform: translateY(var(--axis-y));
+  }
+
+  50% {
+    transform: translateY(calc(var(--axis-y) * -1));
+  }
+}
+
+pre {
+  margin: revert;
+  padding: 1rem;
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  margin: auto;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+.hljs {
+  overflow-wrap: break-word;
+}
+
+.hljs {
+  color: #333;
+  background: #fff;
+  font-family: "Space Mono", monospace;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #777;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #777;
+}
+
+.hljs-string,
+.hljs-doctag,
+.hljs-formula {
+  color: #333;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQIW2O8e/fufwYGBgZBQUEQxcCIIfDu3Tuwivfv30NUoAsAALHpFMMLqZlPAAAAAElFTkSuQmCC)
+    repeat;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #000;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-title.class_,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-name {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-tag {
+  color: #333;
+}
+
+.hljs-regexp {
+  color: #333;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAN37979r6yszIgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQDexSef15DBCwAAAABJRU5ErkJggg==)
+    repeat;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #000;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQAO7d+/+z4gsBhJwdXVlhAvCBECKwIIwAbhKZBUwBQA6hBpm5efZsgAAAABJRU5ErkJggg==)
+    repeat;
+}
+
+.hljs-built_in {
+  color: #000;
+  text-decoration: underline;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  color: #fff;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAE0lEQVQIW2MMDQ39zzhz5kwIAQAyxweWgUHd1AAAAABJRU5ErkJggg==)
+    repeat;
+}
+
+.hljs-addition {
+  color: #000;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAALUlEQVQYV2N89+7dfwYk8P79ewZBQUFkIQZGOiu6e/cuiptQHAPl0NtNxAQBAM97Oejj3Dg7AAAAAElFTkSuQmCC)
+    repeat;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Rose Pine */
+/* * {
+  --color-rosepine-base: #faf4ed;
+  --color-rosepine-surface: #fffaf3;
+  --color-rosepine-overlay: #f2e9e1;
+  --color-rosepine-muted: #9893a5;
+  --color-rosepine-subtle: #797593;
+  --color-rosepine-text: #575279;
+  --color-rosepine-love: #b4637a;
+  --color-rosepine-gold: #ea9d34;
+  --color-rosepine-rose: #d7827e;
+  --color-rosepine-pine: #286983;
+  --color-rosepine-foam: #56949f;
+  --color-rosepine-iris: #907aa9;
+  --color-rosepine-highlight-low: #f4ede8;
+  --color-rosepine-highlight-med: #dfdad9;
+  --color-rosepine-highlight-high: #cecacd;
+}
+
+
+.hljs,
+.hljs-subst {
+  color: var(--color-rosepine-text);
+}
+
+.hljs-selector-tag {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-selector-id {
+  color: var(--color-rosepine-iris);
+  font-weight: 700;
+}
+
+.hljs-selector-attr,
+.hljs-selector-class {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-property,
+.hljs-selector-pseudo {
+  color: var(--color-rosepine-rose);
+}
+
+.hljs-addition {
+  background-color: rgba(156, 207, 216, 0.5);
+}
+
+.hljs-deletion {
+  background-color: rgba(235, 111, 146, 0.5);
+}
+
+.hljs-built_in,
+.hljs-class,
+.hljs-type {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-function,
+.hljs-function > .hljs-title,
+.hljs-title.hljs-function {
+  color: var(--color-rosepine-rose);
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-number {
+  color: var(--color-rosepine-gold);
+}
+
+.hljs-regexp {
+  color: var(--color-rosepine-gold);
+}
+
+.hljs-string {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-title {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-params {
+  color: var(--color-rosepine-text);
+}
+
+.hljs-bullet {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-code {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-formula {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.hljs-link:hover {
+  text-decoration: underline;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--color-rosepine-muted);
+}
+
+.hljs-doctag {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+  color: var(--color-rosepine-pine);
+}
+
+.hljs-meta .hljs-string {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-attr {
+  color: var(--color-rosepine-iris);
+}
+
+.hljs-attribute {
+  color: var(--color-rosepine-text);
+}
+
+.hljs-name {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-section {
+  color: var(--color-rosepine-rose);
+}
+
+.hljs-tag {
+  color: var(--color-rosepine-foam);
+}
+
+.hljs-template-variable,
+.hljs-variable {
+  color: var(--color-rosepine-text);
+}
+
+.hljs-template-tag {
+  color: var(--color-rosepine-pine);
+}
+
+.language-abnf .hljs-attribute {
+  color: var(--color-rosepine-rose);
+}
+
+.language-abnf .hljs-symbol {
+  color: var(--color-rosepine-gold);
+}
+
+.language-apache .hljs-attribute {
+  color: var(--color-rosepine-rose);
+}
+
+.language-apache .hljs-section {
+  color: var(--color-rosepine-foam);
+}
+
+.language-arduino .hljs-built_in {
+  color: var(--color-rosepine-rose);
+}
+
+.language-aspectj .hljs-meta {
+  color: var(--color-rosepine-love);
+}
+
+.language-aspectj > .hljs-title {
+  color: var(--color-rosepine-rose);
+}
+
+.language-bnf .hljs-attribute {
+  color: var(--color-rosepine-iris);
+}
+
+.language-clojure .hljs-name {
+  color: var(--color-rosepine-rose);
+}
+
+.language-clojure .hljs-symbol {
+  color: var(--color-rosepine-gold);
+}
+
+.language-coq .hljs-built_in {
+  color: var(--color-rosepine-rose);
+}
+
+.language-cpp .hljs-meta .hljs-string {
+  color: var(--color-rosepine-iris);
+}
+
+.language-css .hljs-built_in {
+  color: var(--color-rosepine-rose);
+}
+
+.language-css .hljs-keyword {
+  color: var(--color-rosepine-love);
+}
+
+.language-diff .hljs-meta,
+.language-ebnf .hljs-attribute {
+  color: var(--color-rosepine-iris);
+}
+
+.language-glsl .hljs-built_in {
+  color: var(--color-rosepine-rose);
+}
+
+.language-groovy .hljs-meta:not(:first-child),
+.language-haxe .hljs-meta,
+.language-java .hljs-meta {
+  color: var(--color-rosepine-love);
+}
+
+.language-ldif .hljs-attribute {
+  color: var(--color-rosepine-iris);
+}
+
+.language-lisp .hljs-name,
+.language-lua .hljs-built_in,
+.language-moonscript .hljs-built_in,
+.language-nginx .hljs-attribute {
+  color: var(--color-rosepine-rose);
+}
+
+.language-nginx .hljs-section {
+  color: var(--color-rosepine-pine);
+}
+
+.language-pf .hljs-built_in,
+.language-processing .hljs-built_in {
+  color: var(--color-rosepine-rose);
+}
+
+.language-scss .hljs-keyword,
+.language-stylus .hljs-keyword {
+  color: var(--color-rosepine-foam);
+}
+
+.language-swift .hljs-meta {
+  color: var(--color-rosepine-love);
+}
+
+.language-vim .hljs-built_in {
+  color: var(--color-rosepine-rose);
+  font-style: italic;
+}
+
+.language-yaml .hljs-meta {
+  color: var(--color-rosepine-love);
+} */
