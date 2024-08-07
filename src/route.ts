@@ -77,7 +77,12 @@ const router = createRouter({
     {
       path: "/2024/hAPpYneWyEAr",
       name: "hAPpYneWyEAr",
-      component: () => import("./views/2024/happyNewYear.vue"),
+      component: () => import("./views/2024/HappyNewYear.vue"),
+    },
+    {
+      path: "/2024/Midjourney",
+      name: "Midjourney",
+      component: () => import("./views/2024/Midjourney.vue"),
     },
   ],
 });
