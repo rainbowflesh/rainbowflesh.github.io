@@ -1,5 +1,5 @@
 import React from "react";
-import { BackToTopButton } from "../../components/BackToTopButton";
+import { BackToTopButton } from "../../../components/BackToTopButton";
 
 export const BlogTemplate = () => {
   return (

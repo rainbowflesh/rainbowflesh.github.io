@@ -1,6 +1,6 @@
 import { BackToTopButton } from "../../../components/BackToTopButton";
 
-export const BlogHadoop = () => {
+export const Hadoop = () => {
   return (
     <div className="standard-dialog p-12">
       <title>Hadoop 面经</title>
