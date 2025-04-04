@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 435.70001 296.10001"
+   class="sc-breuTD gporMs sc-ivmvlL hfCWgl jss1170 jss1291 sc-gsnTZi jnFvAE jss1177"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="315949ff623122869508aabcd20d62f0.svg"
+   width="435.70001"
+   height="296.10001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs35" />
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <mask
+     id="starfield-arc-mask">
+    <rect
+       x="0"
+       y="0"
+       width="436"
+       height="297"
+       fill="#ffffff"
+       id="rect2" />
+    <path
+       id="starfield-arc-mask-T"
+       d="M 54,125.2 H 76 V 131 H 54 Z"
+       fill="#000000" />
+    <path
+       id="starfield-arc-mask-L"
+       d="m 340,171.1 h 22 v 5.8 h -22 z"
+       fill="#000000" />
+  </mask>
+  <g
+     transform="translate(0,124.74)"
+     id="g25">
+    <path
+       d="m 105.6,30.5 6.2,-16.3 6.2,16.3 1.1,2.9 4.6,12.1 h 6.5 l -16,-40.1 h -4.6 L 93.2,45.5 h 6.6 l 4.6,-12.1 z"
+       id="path7" />
+    <path
+       d="M 236.7,10.9 V 5.4 h -27.1 v 40.1 h 5.9 V 26.8 h 19 v -5.5 h -19 V 10.9 Z"
+       id="path9" />
+    <path
+       d="m 261.1,5.4 h 6 v 40.1 h -6 z"
+       id="path11" />
+    <path
+       d="M 323,11.1 V 5.4 h -27 v 40.1 h 28.4 V 39.8 H 302 v -12 h 19 v -5.7 h -19 v -11 z"
+       id="path13" />
+    <path
+       d="m 430.3,6.2 h 0.9 v 2.7 h 0.4 V 6.2 h 0.9 V 5.8 h -2.2 z"
+       id="path15" />
+    <path
+       d="m 435.3,5.8 -1,1.9 -0.9,-1.9 H 433 v 3.1 h 0.4 V 6.7 l 0.7,1.4 h 0.4 l 0.8,-1.4 v 2.2 h 0.4 V 5.8 Z"
+       id="path17" />
+    <path
+       d="M 422.1,6.6 C 419.3,5.5 415.9,5.5 412,5.4 h -11.8 v 40.2 h 11 c 6.3,0 10.1,0 13.9,-3 4.6,-3.6 7.2,-9.8 7.2,-17.2 0,-9 -4,-16.4 -10.2,-18.8 z m -2,32.3 c -2.2,1 -6.2,1 -8.6,1 h -5.3 V 11.1 h 5.4 c 4.5,0 6.4,0 8.3,0.8 3.9,1.7 6.4,7.2 6.4,13.6 0,7.3 -3.1,12 -6.2,13.4 z"
+       id="path19" />
+    <path
+       d="m 15.9,9.8 c 3.1,0 5.7,1.2 7.2,3.3 0.5,0.6 0.8,1.3 1.1,2 l 0.3,0.8 H 31 L 30.6,14.4 C 29.3,9.8 24.7,4.4 16,4.4 9.4,4.4 2.3,7.3 2.3,15.4 2.3,23.8 10,25.7 14.6,26.9 L 15,27 c 4.5,1.2 6.5,1.7 8,3 1.2,1 1.9,2.5 1.8,4.1 0,3.1 -2.4,6.8 -9.3,6.8 C 13.6,40.9 8.9,40.5 7,36.7 6.6,35.9 6.4,35 6.3,34.1 L 6.4,33 H 0 l 0.2,1.4 c 0.7,4 2.8,7.5 5.9,9.6 2.5,1.6 5.8,2.5 9.5,2.5 10,0 15.3,-6.3 15.3,-12.5 0,-3.7 -1.7,-8.7 -9.5,-11.1 C 20.7,22.6 18.6,22.1 16,21.4 14.9,21.1 14,20.9 13.7,20.8 10.8,19.9 8.2,18.7 8.2,15.4 8.3,10 14.7,9.8 15.9,9.8 Z"
+       id="path21" />
+    <path
+       d="m 182.7,17.4 c 0,-3.1 -0.8,-9.2 -7.5,-11.3 -2.5,-0.8 -7.9,-0.6 -10.6,-0.6 h -12.1 v 40.1 h 6 V 28.8 h 7.1 l 11.9,16.7 h 7.5 l -12.4,-17 c 2.1,-0.3 4.8,-1 7,-3.1 2,-2 3.1,-4.8 3.1,-8 z m -10.4,5.5 c -2,0.3 -4.1,0.4 -6.1,0.3 h -7.7 V 10.9 h 8 c 4.5,0 4.8,0.1 5.7,0.2 3.9,0.8 4.5,4.1 4.5,6 0,1.9 -0.5,5 -4.4,5.8 z"
+       id="path23" />
+  </g>
+  <path
+     id="starfield-top-T"
+     d="m 80,130.15 v 5.5 H 50.2 v -5.5 z" />
+  <path
+     id="starfield-bottom-L"
+     d="m 377.7,164.55 v 5.8 h -29.6 c 0.2,-1.3 0.5,-3.2 0.8,-5.8 z" />
+  <path
+     id="starfield-arc-T"
+     fill="none"
+     mask="url(#starfield-arc-mask)"
+     stroke="currentColor"
+     stroke-width="7.1"
+     d="m 65.6,131.2 c -0.7,5.8 -1.1,11.7 -1.1,17.7 0,6.1 0.4,12.2 1.1,18.1 8.9,71.3 69.7,126.4 143.4,126.4 71.2,0 130.4,-51.5 142.3,-119.3"
+     transform="translate(0,-0.85000005)" />
+  <path
+     id="starfield-arc-L"
+     fill="none"
+     mask="url(#starfield-arc-mask)"
+     stroke="currentColor"
+     stroke-width="7.1"
+     d="m 351.9,170.7 c 1.1,-7.1 1.6,-14.4 1.6,-21.8 C 353.5,69.1 288.8,4.4 209,4.4 136.1,4.4 75.8,58.4 65.9,128.5"
+     transform="translate(0,-0.85000005)" />
+</svg>
