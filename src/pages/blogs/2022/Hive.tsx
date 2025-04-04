@@ -1,4 +1,4 @@
-import { BackToTopButton } from "../../../components/BackToTopButton";
+import { BackToTopButton } from "@components/BackToTopButton.tsx";
 
 export const Hive = () => {
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-import { BackToTopButton } from "../../../components/BackToTopButton";
+import { BackToTopButton } from "@components/BackToTopButton.tsx";
 
 export const Spark = () => {
   return (
