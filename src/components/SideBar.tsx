@@ -123,8 +123,8 @@ export const SideBar = () => {
           友链:
           <ul>
             <li>
-              <a className="font-effect-anaglyph" href="https://donaldturinglee.com/">
-                donaldturinglee.com
+              <a className="font-effect-anaglyph" href="/404">
+                naidesu
               </a>
             </li>
           </ul>
