@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <style>
+      .cell {
+        width: 12px;
+        height: 20px;
+        display: inline-block;
+      }
+      #text-grid {
+        font-family: Geneva_9;
+      }
+    </style>
+  </header>
+  <body>
+    <input type="range" value="0" min="0" max="120" step="0.001" id="timeInp" />
+    <div id="text-grid"></div>
+    <script>
+      let str = `
+                rainbowflesh RainbowFlesh RAINBOWFLESH RaINbOWfLEsh rAinbowflesh raInbowflesh raiNbowflesh rainBowflesh rainbOwflesh rainboWflesh rainbowFlesh rainbowfLesh rainbowflEsh rainbowfleSh rainbowflesH RainbowfLesh RainbowflEsh RainbowfleSh RainbowflesH raiNboWFlEsh RaInBowfLeSh RaInBoWFlEsH RAINbowflesH RaINbOWflesh
+`;
+
+      const sentences = str
+        .split(/[\n\r]/)
+        .filter((s) => s.length > 0)
+        .map((s) => s + " ");
+
+      function getCharAt(x, y) {
+        const si = y % sentences.length;
+        const ci = Math.min(x, sentences[si].length - 1);
+        return sentences[si][ci];
+      }
+
+      const rows = 30;
+      const cols = 100;
+
+      const cellMap = [];
+      const root = document.querySelector("#text-grid");
+      for (let y = 0; y < rows; y++) {
+        const row = document.createElement("div");
+        root.appendChild(row);
+        cellMap[y] = [];
+        for (let x = 0; x < cols; x++) {
+          const cell = document.createElement("div");
+          cell.classList.add("cell");
+          cell.setAttribute("data-row", row);
+          cell.setAttribute("data-col", y);
+          cell.innerText = getCharAt(x, y);
+          row.appendChild(cell);
+          cellMap[y][x] = cell;
+        }
+      }
+
+      let animationBegin = null;
+      function animate() {
+        if (animationBegin == null) animationBegin = new Date();
+        timeInp.value = (new Date() - animationBegin) / 1000;
+        console.time("drawText");
+        drawText();
+        console.timeEnd("drawText");
+        requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+
+      timeInp.addEventListener("input", drawText);
+
+      function transform(x, y, centerX, centerY, time) {
+        const dx = x - centerX;
+        const dy = y - centerY;
+
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        const currAngle = Math.atan2(dy, dx);
+        const newAngle = currAngle - Math.pow(dist, 0.5) * time * 0.1;
+
+        return [centerX + Math.cos(newAngle) * dist, centerY + Math.sin(newAngle) * dist];
+      }
+
+      function drawText() {
+        const time = Number(timeInp.value);
+
+        // Clear the screen.
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < cols; x++) {
+            cellMap[y][x].innerText = " ";
+          }
+        }
+
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < cols; x++) {
+            let [nx, ny] = transform(x / cols, y / rows, 0.5, 0.5, time);
+            nx = Math.floor(nx * cols);
+            ny = Math.floor(ny * rows);
+            if (nx < 0 || ny < 0 || ny >= rows || nx >= cols) continue;
+            cellMap[ny][nx].innerText = getCharAt(x, y);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

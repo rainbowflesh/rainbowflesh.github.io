@@ -1,0 +1,21 @@
+---
+import "../styles/tailwind.css";
+import "@sakun/system.css";
+import "../styles/global.css";
+import Layout from "./Layout.astro";
+import BackToTop from "../components/BackToTop.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <article class="markdown-body pt-8 pb-8 pr-8 pl-4 max-w-dvh">
+    <slot />
+  </article>
+
+  <BackToTop />
+</Layout>

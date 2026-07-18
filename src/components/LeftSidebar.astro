@@ -1,0 +1,95 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+const currentPath = Astro.url.pathname;
+
+const years = [...new Set(posts.map((post: { id: string }) => post.id.split("/")[0]))].sort((a, b) =>
+  b.localeCompare(a),
+);
+
+const postsByYear = Object.fromEntries(
+  years.map((year) => [
+    year,
+    posts
+      .filter((post: { id: string }) => post.id.startsWith(`${year}/`))
+      .sort((a: { data: { date: string | number | Date } }, b: { data: { date: string | number | Date } }) => {
+        const aDate = a.data.date ? new Date(a.data.date).getTime() : 0;
+        const bDate = b.data.date ? new Date(b.data.date).getTime() : 0;
+        return bDate - aDate;
+      }),
+  ]),
+);
+---
+
+<div class="l-sidebar window max-h-screen min-h-fit">
+  <div class="title-bar">
+    <button aria-label="Close" class="close"></button>
+    <h1 class="title">Index</h1>
+    <button aria-label="Resize" class="resize"></button>
+  </div>
+
+  <div class="details-bar">
+    <span>Have a</span>
+    <span>nice day :)</span>
+  </div>
+
+  <div class="window-pane" style="padding: 1rem; font-size: 1rem">
+    <ul>
+      <li>
+        <nav>
+          <a href="/">Intro</a>
+        </nav>
+      </li>
+
+      <li>
+        Blog
+        <ul>
+          {
+            years.map((year) => (
+              <li>
+                <details data-year={year} open={currentPath.includes(`/blog/${year}/`)}>
+                  <summary>{year}</summary>
+                  <ul>
+                    {postsByYear[year].map((post: { id: any; data: { title: unknown } }) => (
+                      <li>
+                        <nav>
+                          <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                        </nav>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+
+      <li>
+        <nav>
+          <a href="/stuffs">面白いもの</a>
+        </nav>
+      </li>
+
+      <li>
+        <nav>
+          <a href="/about">About</a>
+        </nav>
+      </li>
+    </ul>
+    <div class="windows">
+      <div class="title-bar"></div>
+
+      <div>
+        友链:
+
+        <ul>
+          <li>
+            <a class="font-effect-anaglyph" href="/404"> naidesu </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
